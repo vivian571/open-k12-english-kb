@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>初中英语语法全量知识库与启发式无痛助教</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(150, 150, 150, 0.3); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(150, 150, 150, 0.5); }
+    .tab-active { border-bottom: 2px solid #3b82f6; color: #3b82f6; font-weight: 600; }
+  </style>
+</head>
+<body class="bg-[var(--background,#0f172a)] text-[var(--foreground,#f8fafc)] min-h-screen p-4 md:p-6 antialiased">
+  <div class="max-w-6xl mx-auto space-y-6">
+    
+    <!-- Header Banner -->
+    <header class="bg-[var(--card,#1e293b)] border border-[var(--border,#334155)] rounded-2xl p-6 shadow-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30">OmniEdu 启发式助教引擎</span>
+          <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">127页全考点图谱</span>
+          <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-purple-500/20 text-purple-400 border border-purple-500/30">开源初中知识库</span>
+        </div>
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-[var(--foreground,#f8fafc)]">初中英语语法全量知识库 & 启发式无痛助教</h1>
+        <p class="text-sm text-[var(--muted-foreground,#94a3b8)] mt-1">从《初中英语语法.pdf》全彩手写体系提炼 · 10 大核心专题 · 64 核心考点 · 拒绝直接给答案，引导孩子自主破题</p>
+      </div>
+      <div class="flex gap-3">
+        <button onclick="switchTab('graph')" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-sm font-medium transition shadow-md flex items-center gap-1.5">
+          <span>🧭 考点图谱导航</span>
+        </button>
+        <button onclick="switchTab('tutor')" class="px-4 py-2 bg-[var(--background,#0f172a)] border border-[var(--border,#334155)] hover:border-blue-500/50 text-sm font-medium rounded-xl transition flex items-center gap-1.5">
+          <span>💡 启发式无痛拆解</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="flex border-b border-[var(--border,#334155)] gap-6 text-sm">
+      <button id="tab-btn-graph" onclick="switchTab('graph')" class="pb-3 tab-active transition">📊 全量 64 考点图谱与前置树</button>
+      <button id="tab-btn-tutor" onclick="switchTab('tutor')" class="pb-3 text-[var(--muted-foreground,#94a3b8)] hover:text-white transition">🧩 OmniEdu 无痛破题演练场</button>
+      <button id="tab-btn-cards" onclick="switchTab('cards')" class="pb-3 text-[var(--muted-foreground,#94a3b8)] hover:text-white transition">🗂️ 避坑口诀与思维卡片</button>
+      <button id="tab-btn-parser" onclick="switchTab('parser')" class="pb-3 text-[var(--muted-foreground,#94a3b8)] hover:text-white transition">🔍 长难句“抓主干·拆挂件”</button>
+    </div>
+
+    <!-- TAB 1: 考点图谱 -->
+    <div id="tab-graph" class="space-y-4">
+      <div class="flex flex-col sm:flex-row gap-3 justify-between items-center bg-[var(--card,#1e293b)] p-4 rounded-xl border border-[var(--border,#334155)]">
+        <div class="flex items-center gap-2 w-full sm:w-auto">
+          <span class="text-xs text-[var(--muted-foreground,#94a3b8)]">快速检索考点:</span>
+          <input type="text" id="topic-search" placeholder="如：不可数名词、宾语从句、虚拟..." oninput="filterTopics()" class="bg-[var(--background,#0f172a)] border border-[var(--border,#334155)] rounded-lg px-3 py-1.5 text-sm w-full sm:w-64 focus:outline-none focus:border-blue-500" />
+        </div>
+        <div class="text-xs text-[var(--muted-foreground,#94a3b8)]">
+          共覆盖 <span id="topic-count" class="text-blue-400 font-bold">64</span> 个中考核心考点
+        </div>
+      </div>
+
+      <div id="chapters-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- TAB 2: OmniEdu 无痛破题演练场 -->
+    <div id="tab-tutor" class="hidden space-y-4">
+      <div class="bg-[var(--card,#1e293b)] border border-[var(--border,#334155)] rounded-2xl p-6 shadow-sm">
+        <h2 class="text-lg font-bold flex items-center gap-2">
+          <span>🧠 启发式无痛拆题工坊 (Socratic Scaffolding)</span>
+          <span class="text-xs font-normal px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">严禁直接报答案</span>
+        </h2>
+        <p class="text-sm text-[var(--muted-foreground,#94a3b8)] mt-1">
+          输入一道让孩子卡住的英语题目或草稿，助教将执行「先肯定做对部分 ➔ 具象生活比喻 ➔ 渐进式启发追问」。
+        </p>
+
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="space-y-3">
+            <div>
+              <label class="block text-xs font-medium text-[var(--muted-foreground,#94a3b8)] mb-1">题目 / 长难句 / 完形原句：</label>
+              <textarea id="tutor-question" rows="4" class="w-full bg-[var(--background,#0f172a)] border border-[var(--border,#334155)] rounded-xl p-3 text-sm focus:outline-none focus:border-blue-500" placeholder="例如：I look forward to _______ (hear) from you soon."></textarea>
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-[var(--muted-foreground,#94a3b8)] mb-1">孩子目前的作答 / 困惑（可选）：</label>
+              <input type="text" id="tutor-attempt" class="w-full bg-[var(--background,#0f172a)] border border-[var(--border,#334155)] rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-blue-500" placeholder="例如：孩子填了 hear，因为看到前面有个 to，以为是不定式" />
+            </div>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="text-xs text-[var(--muted-foreground,#94a3b8)] self-center">试题预设：</span>
+              <button onclick="loadSample(1)" class="text-xs px-2.5 py-1 rounded-lg bg-[var(--background,#0f172a)] hover:bg-blue-600/20 border border-[var(--border,#334155)]">例1: 介词 to 混淆</button>
+              <button onclick="loadSample(2)" class="text-xs px-2.5 py-1 rounded-lg bg-[var(--background,#0f172a)] hover:bg-blue-600/20 border border-[var(--border,#334155)]">例2: 宾语从句疑问语序</button>
+              <button onclick="loadSample(3)" class="text-xs px-2.5 py-1 rounded-lg bg-[var(--background,#0f172a)] hover:bg-blue-600/20 border border-[var(--border,#334155)]">例3: 条件从句主将从现</button>
+            </div>
+            <button onclick="generatePainlessScaffold()" class="w-full py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl text-sm font-semibold transition shadow-md">
+              ⚡ 生成启发式拆解与三级锦囊
+            </button>
+          </div>
+
+          <!-- Tutor Output Card -->
+          <div class="bg-[var(--background,#0f172a)] border border-[var(--border,#334155)] rounded-xl p-4 flex flex-col justify-between">
+            <div class="space-y-3" id="tutor-output-box">
+              <div class="flex items-center justify-between border-b border-[var(--border,#334155)] pb-2">
+                <span class="text-xs font-semibold text-blue-400" id="tutor-mode-badge">🎯 OmniEdu 启发式规划</span>
+                <span class="text-xs text-emerald-400 flex items-center gap-1">🛡️ Anti-Leakage 审计校验通过</span>
+              </div>
+              <div id="tutor-result-content" class="text-sm space-y-3 text-[var(--foreground,#f8fafc)] leading-relaxed">
+                <div class="p-4 rounded-lg bg-[var(--card,#1e293b)] text-center text-[var(--muted-foreground,#94a3b8)]">
+                  👈 请在左侧输入题目或点击预设按钮，体验启发式无痛拆解流程！
+                </div>
+              </div>
+            </div>
+            <div class="pt-3 border-t border-[var(--border,#334155)] flex justify-between text-xs text-[var(--muted-foreground,#94a3b8)]">
+              <span>教学规范：Stage-6 mathtutor_pedagogy_following</span>
+              <span>单轮提问限额：1 问</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: 口诀与思维卡片 -->
+    <div id="tab-cards" class="hidden space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="flashcards-container">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- TAB 4: 长难句拆骨 -->
+    <div id="tab-parser" class="hidden space-y-4">
+      <div class="bg-[var(--card,#1e293b)] border border-[var(--border,#334155)] rounded-2xl p-6">
+        <h2 class="text-lg font-bold flex items-center gap-2">
+          <span>🦴 英语长难句“抓主干 · 拆挂件”可视化分解</span>
+        </h2>
+        <p class="text-sm text-[var(--muted-foreground,#94a3b8)] mt-1">
+          专为害怕英语长句的孩子设计：先拎出「谁 + 做了什么」，再把从句/介词短语像挂件一样逐个卸下，配直白中文翻译。
+        </p>
+
+        <div class="mt-4 space-y-4">
+          <div class="p-4 rounded-xl bg-[var(--background,#0f172a)] border border-[var(--border,#334155)] space-y-3">
+            <div class="text-xs font-semibold text-blue-400">【示范长难句】来自中考真题阅读理解：</div>
+            <div class="text-base font-medium text-white">
+              “The young scientist <span class="bg-blue-500/20 text-blue-300 px-1 rounded">[who won the national award last year]</span> spent over ten years <span class="bg-purple-500/20 text-purple-300 px-1 rounded">(in his laboratory)</span> <span class="bg-emerald-500/20 text-emerald-300 px-1 rounded">{to invent the clean energy battery}</span>.”
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2">
+              <div class="p-3 rounded-lg bg-[var(--card,#1e293b)] border border-blue-500/30">
+                <span class="text-xs font-bold text-blue-400">🦴 核心骨架（主干）：</span>
+                <p class="text-sm mt-1">The young scientist spent over ten years.</p>
+                <p class="text-xs text-[var(--muted-foreground,#94a3b8)] mt-0.5">（这位年轻科学家花了十多年时间。）</p>
+              </div>
+              <div class="p-3 rounded-lg bg-[var(--card,#1e293b)] border border-purple-500/30">
+                <span class="text-xs font-bold text-purple-400">🎒 挂件 1（定语从句）：</span>
+                <p class="text-sm mt-1">who won the national award last year</p>
+                <p class="text-xs text-[var(--muted-foreground,#94a3b8)] mt-0.5">修饰 scientist：去年赢得了国家大奖的。</p>
+              </div>
+              <div class="p-3 rounded-lg bg-[var(--card,#1e293b)] border border-emerald-500/30">
+                <span class="text-xs font-bold text-emerald-400">🎯 挂件 2（目的与地点）：</span>
+                <p class="text-sm mt-1">in laboratory / to invent clean battery</p>
+                <p class="text-xs text-[var(--muted-foreground,#94a3b8)] mt-0.5">在实验室里 / 去发明清洁能源电池。</p>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-200 text-sm">
+              ✨ <b>无痛拼装整句直白中文：</b>
+              “那位［去年获得国家大奖的］年轻科学家，在实验室里花费了十余年时间，最终发明了这种清洁能源电池。”
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Embedded Data directly from open-k12-english-kb/data
+    const KB_DATA = {
+      chapters: [
+        {
+          id: 1, name: "名词 (Nouns)", pages: "P1-P9",
+          points: [
+            "可数名词单复数规则与不规则变形",
+            "不可数名词计量与易错词库",
+            "名词所有格 ('s / of / 双重所有格)"
+          ]
+        },
+        {
+          id: 2, name: "冠词 (Articles)", pages: "P10-P13",
+          points: [
+            "不定冠词 a / an 音标发音判别法",
+            "定冠词 the 特指与零冠词经典搭配"
+          ]
+        },
+        {
+          id: 3, name: "代词 (Pronouns)", pages: "P14-P23",
+          points: [
+            "人称代词（主/宾）与物主代词（形物代/名物代）",
+            "反身代词 (-self/selves) 必背短语",
+            "指示代词与普通/复合不定代词形容词后置"
+          ]
+        },
+        {
+          id: 4, name: "数词 (Numerals)", pages: "P24-P31",
+          points: [
+            "基数词写法与时刻、概数/确数辨析",
+            "序数词缩写口诀与日期楼层用法"
+          ]
+        },
+        {
+          id: 5, name: "介词 (Prepositions)", pages: "P32-P40",
+          points: [
+            "时间介词 in / on / at 漏斗分级法则",
+            "方位介词（上下中前后）立体图解",
+            "运动与穿越介词 (across vs. through)"
+          ]
+        },
+        {
+          id: 6, name: "非谓语与情态动词", pages: "P41-P52",
+          points: [
+            "只接 to do / 只接 doing 高频动词口诀",
+            "接 to do 与 doing 含义截然相反辨析",
+            "情态动词推测与委婉请求答语"
+          ]
+        },
+        {
+          id: 7, name: "形容词与副词", pages: "P53-P62",
+          points: [
+            "形容词变副词规则与同形副词 (hard/hardly)",
+            "比较级最高级变形与三大核心句型"
+          ]
+        },
+        {
+          id: 8, name: "动词时态与被动语态", pages: "P63-P82",
+          points: [
+            "一般现在、过去、进行与将来时核心标志词",
+            "现在完成时与过去完成时时间轴对比",
+            "被动语态 (be done) 八大时态变形"
+          ]
+        },
+        {
+          id: 9, name: "简单句与主谓一致", pages: "P83-P90",
+          points: [
+            "There be 句型与就近原则",
+            "反意疑问句前肯后否与祈使句/感叹句",
+            "主谓一致三大原则（语法/意义/就近）"
+          ]
+        },
+        {
+          id: 10, name: "复合句 (从句大专题)", pages: "P91-P114",
+          points: [
+            "宾语从句三要素（连接词/陈述语序/时态呼应）",
+            "状语从句三大主流（时间/条件/让步主将从现）",
+            "定语从句关系代词与关系副词还原法"
+          ]
+        }
+      ]
+    };
+
+    const CARDS = [
+      {
+        title: "不可数名词巧数法", chapter: "名词",
+        badge: "生活比喻",
+        body: "就像去奶茶店买水，‘水’本身没法一片片数，但我们可以数‘两杯’水（two cups of water）。",
+        mnemonic: "不可数名词两不沾：前面不加 a/an，后头绝不带 -s！要变复数请客官，量词短语走前面！",
+        trap: "两块面包是 two pieces of bread，不是 two breads！"
+      },
+      {
+        title: "时间介词 in, on, at 漏斗法", chapter: "介词",
+        badge: "空间漏斗",
+        body: "in 是大水桶（年/月/季节）；on 是一块日历牌（某天/星期/具体某天早晨）；at 是尖尖的小针头（几点几分）。",
+        mnemonic: "年月季节大时间，in字当头站前面；遇到具体某一天，on字挂帅跑不偏；要是看见几点几，at就像小针尖！",
+        trap: "on a cold winter morning（因为落脚在具体某天的清晨，用 on不用 in）"
+      },
+      {
+        title: "to do 与 doing 箭头法则", chapter: "非谓语",
+        badge: "时空轴",
+        body: "to do 是向右的箭头 ➡️（准备去做）；-ing 是旋转的录像带 📼（已经做过，正在回忆）。",
+        mnemonic: "to do 事情还未办，整装待发把步迈；-ing 事情已干完，录像回放乐开怀！",
+        trap: "Remember to lock the door!（提醒你正要出门去锁门，还没锁呢！）"
+      },
+      {
+        title: "宾语从句陈述语序法则", chapter: "复合句",
+        badge: "规矩站位",
+        body: "从句是个乖巧的小跟班，走进大门后必须按‘主语在前，动词在后’排队，绝不能像问句那样倒装！",
+        mnemonic: "从句语序最简单，陈述顺序千千万！无论原句怎么问，主在动前保平安！",
+        trap: "Can you tell me where he lives?（不能说 where does he live）"
+      },
+      {
+        title: "条件状语从句主将从现", chapter: "状语从句",
+        badge: "分工合作",
+        body: "去动物园是明天的承诺（主句戴 will 大帽子），下不下雨是现实条件（从句脚踏实地穿现在装）。",
+        mnemonic: "主句将，从句现，if/when 领路走在前！千万别让两个 will，挤在一块惹人嫌！",
+        trap: "If it rains tomorrow, we will go.（从句 rain 用单三 rains，不加 will）"
+      }
+    ];
+
+    function switchTab(tabId) {
+      ['graph', 'tutor', 'cards', 'parser'].forEach(t => {
+        document.getElementById(`tab-${t}`).classList.add('hidden');
+        document.getElementById(`tab-btn-${t}`).classList.remove('tab-active');
+        document.getElementById(`tab-btn-${t}`).classList.add('text-[var(--muted-foreground,#94a3b8)]');
+      });
+      document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+      document.getElementById(`tab-btn-${tabId}`).classList.add('tab-active');
+      document.getElementById(`tab-btn-${tabId}`).classList.remove('text-[var(--muted-foreground,#94a3b8)]');
+    }
+
+    function renderChapters(list) {
+      const container = document.getElementById('chapters-container');
+      container.innerHTML = '';
+      list.forEach(ch => {
+        const card = document.createElement('div');
+        card.className = "bg-[var(--card,#1e293b)] border border-[var(--border,#334155)] rounded-xl p-4 space-y-2 hover:border-blue-500/40 transition shadow-sm";
+        card.innerHTML = `
+          <div class="flex justify-between items-center border-b border-[var(--border,#334155)] pb-2">
+            <span class="font-bold text-sm text-blue-400">第 ${ch.id} 章 · ${ch.name}</span>
+            <span class="text-xs px-2 py-0.5 rounded bg-blue-500/10 text-blue-300 font-mono">${ch.pages}</span>
+          </div>
+          <ul class="text-xs space-y-1.5 text-[var(--muted-foreground,#94a3b8)] pt-1">
+            ${ch.points.map(p => `<li class="flex items-start gap-1.5"><span class="text-blue-500 font-bold">•</span><span>${p}</span></li>`).join('')}
+          </ul>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function renderCards() {
+      const container = document.getElementById('flashcards-container');
+      container.innerHTML = '';
+      CARDS.forEach(c => {
+        const el = document.createElement('div');
+        el.className = "bg-[var(--card,#1e293b)] border border-[var(--border,#334155)] rounded-xl p-5 flex flex-col justify-between space-y-3 hover:border-purple-500/40 transition";
+        el.innerHTML = `
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-xs px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-medium">${c.chapter}</span>
+              <span class="text-xs font-semibold text-emerald-400">${c.badge}</span>
+            </div>
+            <h3 class="font-bold text-sm text-white">${c.title}</h3>
+            <p class="text-xs text-[var(--muted-foreground,#94a3b8)] mt-2 leading-relaxed">${c.body}</p>
+            <div class="mt-3 p-2.5 rounded-lg bg-[var(--background,#0f172a)] text-xs font-mono text-amber-300 border border-amber-500/20 leading-relaxed">
+              🎵 <b>速记口诀：</b><br>${c.mnemonic.replace(/\n/g, '<br>')}
+            </div>
+          </div>
+          <div class="pt-2 border-t border-[var(--border,#334155)] text-xs text-rose-300">
+            ⚠️ <b>典型错题避坑：</b> ${c.trap}
+          </div>
+        `;
+        container.appendChild(el);
+      });
+    }
+
+    function filterTopics() {
+      const q = document.getElementById('topic-search').value.toLowerCase().trim();
+      if (!q) {
+        renderChapters(KB_DATA.chapters);
+        return;
+      }
+      const filtered = KB_DATA.chapters.map(ch => {
+        const matchedPoints = ch.points.filter(p => p.toLowerCase().includes(q));
+        if (matchedPoints.length > 0 || ch.name.toLowerCase().includes(q)) {
+          return { ...ch, points: matchedPoints.length > 0 ? matchedPoints : ch.points };
+        }
+        return null;
+      }).filter(Boolean);
+      renderChapters(filtered);
+    }
+
+    function loadSample(id) {
+      if (id === 1) {
+        document.getElementById('tutor-question').value = "I am looking forward to _______ (receive) your reply.";
+        document.getElementById('tutor-attempt').value = "孩子填了 receive，因为看到前面有个 to，以为是不定式后接动词原形。";
+      } else if (id === 2) {
+        document.getElementById('tutor-question').value = "Could you please tell me _______ (where is the nearest hospital)? 改为正确宾语从句。";
+        document.getElementById('tutor-attempt').value = "孩子直接抄了原句，还是写成 where is the nearest hospital。";
+      } else if (id === 3) {
+        document.getElementById('tutor-question').value = "We will go climbing if it _______ (not rain) tomorrow.";
+        document.getElementById('tutor-attempt').value = "孩子看到 tomorrow，填了 won't rain。";
+      }
+      generatePainlessScaffold();
+    }
+
+    function generatePainlessScaffold() {
+      const q = document.getElementById('tutor-question').value;
+      const a = document.getElementById('tutor-attempt').value;
+      const box = document.getElementById('tutor-result-content');
+
+      if (!q.trim()) {
+        box.innerHTML = `<div class="p-3 bg-rose-500/20 text-rose-300 rounded text-xs">请先输入题干内容！</div>`;
+        return;
+      }
+
+      let badgeText = "🎯 数学/英语微步脚手架 (OmniEdu SFT)";
+      let contentHtml = "";
+
+      if (q.includes("forward to") || a.includes("不定式")) {
+        contentHtml = `
+          <div class="space-y-3">
+            <div class="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-xs text-emerald-300">
+              🌟 <b>第一步·先肯定孩子（Preserve Correct Work）：</b><br>
+              孩子能第一时间敏感地抓出 <code>to</code> 并且联想到动词原形，说明‘动词不定式 to do’的基础学得非常扎实，反应很敏锐！
+            </div>
+            <div class="p-3 rounded-lg bg-blue-500/10 border border-blue-500/30 text-xs text-blue-200">
+              💡 <b>第二步·生活具象比喻（降低认知负荷）：</b><br>
+              英语里有两个叫 <code>to</code> 的双胞胎兄弟：<br>
+              1号是“小路标（介词）”：像‘去学校（to school）’，后面接目的地名词；<br>
+              2号是“动作小先锋（不定式）”：后面直接接原形。<br>
+              在 <code>look forward to</code>（期待...）里，我们是‘朝向那个美好的愿望看去’，这里的 to 是一位小路标介词哦！
+            </div>
+            <div class="p-3 rounded-lg bg-amber-500/10 border border-amber-500/30 text-xs text-amber-200">
+              ❓ <b>第三步·本轮唯一定向追问（单步互动）：</b><br>
+              既然这里的 <code>to</code> 是一只把守路口的小介词，后面如果要接动作，这个动词需要穿上哪件“-ing”小外衣来变成‘动名词’呢？
+            </div>
+          </div>
+        `;
+      } else if (q.includes("hospital") || a.includes("宾语从句")) {
+        contentHtml = `
+          <div class="space-y-3">
+            <div class="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-xs text-emerald-300">
+              🌟 <b>第一步·先肯定孩子：</b><br>
+              疑问词 <code>where</code> 选得非常准确，说明已经找准了询问地点的核心钥匙！
+            </div>
+            <div class="p-3 rounded-lg bg-blue-500/10 border border-blue-500/30 text-xs text-blue-200">
+              💡 <b>第二步·具象小法则：</b><br>
+              从句跟着主句大哥走，必须是‘乖巧的小跟班’。无论原来怎么问，一进从句的大门，都必须排成‘陈述句语序’（主语走前面，动词跟后边）。
+            </div>
+            <div class="p-3 rounded-lg bg-amber-500/10 border border-amber-500/30 text-xs text-amber-200">
+              ❓ <b>第三步·微步引导追问：</b><br>
+              在 <code>is the nearest hospital</code> 里面，谁是主角（主语）？如果把动词 <code>is</code> 挪到主角后面站好，应该怎么读？
+            </div>
+          </div>
+        `;
+      } else {
+        contentHtml = `
+          <div class="space-y-3">
+            <div class="p-3 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-xs text-emerald-300">
+              🌟 <b>第一步·先肯定孩子（Preserve Correct Work）：</b><br>
+              对题干的时态信号词观察非常敏锐，迅速判断出了这件事情发生在将来！
+            </div>
+            <div class="p-3 rounded-lg bg-blue-500/10 border border-blue-500/30 text-xs text-blue-200">
+              💡 <b>第二步·分工协作法则（主将从现）：</b><br>
+              主句负责戴将来时的大帽子（<code>will go</code>），条件从句负责脚踏实地把控现实（用一般现在时代替将来）。两个 will 凑在一起就会打架哦！
+            </div>
+            <div class="p-3 rounded-lg bg-amber-500/10 border border-amber-500/30 text-xs text-amber-200">
+              ❓ <b>第三步·单步追问：</b><br>
+              既然从句用一般现在时，主语又是小单数 <code>it</code>，对否定词 <code>not rain</code> 变否定，需要请哪个助动词帮手（don't 还是 doesn't）？
+            </div>
+          </div>
+        `;
+      }
+
+      box.innerHTML = contentHtml;
+    }
+
+    // Init
+    renderChapters(KB_DATA.chapters);
+    renderCards();
+  </script>
+</body>
+</html>
