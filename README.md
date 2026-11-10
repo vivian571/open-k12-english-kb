@@ -6,7 +6,11 @@
 
 本项目是一个面向初中阶段（中考体系）的结构化、可检索、可扩展的开源英语知识库。收录了**初中英语全量语法知识图谱（10 大核心专题、64 个必考考点与前置依赖树）**，以及**外研版（WY）七年级上册同步教材与学习资料索引**。
 
-🌐 **在线可视化知识库网站**：[https://vivian571.github.io/open-k12-english-kb/](https://vivian571.github.io/open-k12-english-kb/)
+🌐 **在线可视化知识库网站**：[https://vivian571.github.io/open-k12-english-kb/](https://vivian571.github.io/open-k12-english-kb/)  
+🃏 **衍生独立项目（无痛闯关卡与 Anki 牌组）**：[vivian571/open-k12-english-cards](https://github.com/vivian571/open-k12-english-cards) (在线体验：[https://vivian571.github.io/open-k12-english-cards/](https://vivian571.github.io/open-k12-english-cards/))
+
+> 💡 **动态联动机制**：无痛闯关卡已作为独立项目独立维护。当本知识库更新语法考点或新增教材单元时，闯关卡项目通过同步脚本与 GitHub Actions 自动全量重构卡片与 Anki 牌组。
+
 
 ---
 
