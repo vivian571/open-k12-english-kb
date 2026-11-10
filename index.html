@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>初中英语全量知识库 (Open K-12 English Knowledge Base)</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #3b82f6;
+      --accent-hover: #60a5fa;
+      --tag-bg: rgba(59, 130, 246, 0.15);
+      --tag-border: rgba(59, 130, 246, 0.3);
+      --success: #10b981;
+      --purple: #8b5cf6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.5;
+      padding: 1.5rem;
+    }
+    .container { max-width: 1150px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
+    
+    /* Header */
+    header {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+    }
+    .badge-blue { background: rgba(59,130,246,0.15); border-color: rgba(59,130,246,0.4); color: #60a5fa; }
+    .badge-green { background: rgba(16,185,129,0.15); border-color: rgba(16,185,129,0.4); color: #34d399; }
+    .badge-purple { background: rgba(139,92,246,0.15); border-color: rgba(139,92,246,0.4); color: #a78bfa; }
+    
+    h1 { font-size: 1.75rem; font-weight: 700; color: #fff; }
+    .subtitle { color: var(--muted); font-size: 0.9rem; }
+    
+    /* Nav Tabs */
+    .tabs {
+      display: flex;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.25rem;
+      overflow-x: auto;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover { color: var(--text); }
+    .tab-btn.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      font-weight: 600;
+    }
+    
+    /* Search & Filter Bar */
+    .filter-bar {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 0.85rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .search-input {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 0.5rem 0.85rem;
+      color: var(--text);
+      font-size: 0.875rem;
+      min-width: 260px;
+      outline: none;
+    }
+    .search-input:focus { border-color: var(--accent); }
+    
+    /* Content Sections */
+    .section-view { display: none; flex-direction: column; gap: 1.25rem; }
+    .section-view.active { display: flex; }
+    
+    /* Topics Grid */
+    .chapter-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.85rem;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .chapter-header {
+      background: rgba(255,255,255,0.03);
+      padding: 0.85rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .chapter-title { font-weight: 600; font-size: 1.05rem; color: #fff; }
+    .chapter-pages { font-size: 0.75rem; color: var(--muted); }
+    .points-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 0.85rem;
+      padding: 1rem;
+    }
+    .point-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 0.65rem;
+      padding: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      transition: border-color 0.2s;
+    }
+    .point-card:hover { border-color: rgba(59,130,246,0.5); }
+    .point-name { font-weight: 600; font-size: 0.95rem; color: #60a5fa; }
+    .point-sub { font-size: 0.8rem; color: var(--muted); }
+    .point-prereq { font-size: 0.75rem; color: #fbbf24; background: rgba(251,191,36,0.1); padding: 0.2rem 0.5rem; border-radius: 0.25rem; width: fit-content; }
+    
+    /* Textbook Materials Grid */
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1rem;
+    }
+    .mat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.85rem;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .mat-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #34d399;
+      background: rgba(16,185,129,0.15);
+      border: 1px solid rgba(16,185,129,0.3);
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.35rem;
+      width: fit-content;
+    }
+    .mat-title { font-weight: 600; font-size: 1rem; color: #fff; }
+    .mat-desc { font-size: 0.85rem; color: var(--muted); flex-grow: 1; }
+    .mat-footer {
+      font-size: 0.75rem;
+      color: #94a3b8;
+      border-top: 1px solid var(--border);
+      padding-top: 0.6rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Long sentence demo */
+    .sentence-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.85rem;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .sentence-original {
+      font-size: 1.1rem;
+      font-family: Georgia, serif;
+      color: #f1f5f9;
+      background: var(--bg);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border-left: 4px solid var(--accent);
+    }
+    .tree-block {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      font-size: 0.875rem;
+      line-height: 1.7;
+    }
+    .tree-highlight-core { color: #34d399; font-weight: bold; }
+    .tree-highlight-sub { color: #60a5fa; }
+    .tree-highlight-prep { color: #fbbf24; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Top Header -->
+    <header>
+      <div class="badge-row">
+        <span class="badge badge-blue">全量知识图谱</span>
+        <span class="badge badge-green">10 大专题 · 64 核心考点</span>
+        <span class="badge badge-purple">外研版 (WY) 七年级上册同步</span>
+      </div>
+      <h1>初中英语全量知识库 (Open K-12 English Knowledge Base)</h1>
+      <p class="subtitle">面向中考英语体系的结构化知识库 · 拓扑前置依赖树 · 扫描教材同步索引 · 纯净知识引擎</p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('grammar')">📊 语法 64 考点图谱与前置树</button>
+      <button class="tab-btn" onclick="switchTab('textbooks')">📖 同步教材与资料库 (外研七上)</button>
+      <button class="tab-btn" onclick="switchTab('sentences')">🔍 长难句结构拆解台</button>
+    </div>
+
+    <!-- VIEW 1: Grammar Topics -->
+    <div id="view-grammar" class="section-view active">
+      <div class="filter-bar">
+        <div>
+          <input type="text" id="grammar-search" class="search-input" placeholder="输入考点关键词，如：名词、从句、时态..." oninput="filterGrammar()">
+        </div>
+        <div style="font-size: 0.85rem; color: var(--muted);">
+          覆盖初中 <strong style="color: #60a5fa;">10</strong> 大专题，共 <strong style="color: #34d399;" id="point-total-count">64</strong> 个中考核心考点
+        </div>
+      </div>
+
+      <div id="grammar-container"></div>
+    </div>
+
+    <!-- VIEW 2: Textbooks Catalog -->
+    <div id="view-textbooks" class="section-view">
+      <div class="filter-bar">
+        <div>
+          <span style="font-weight: 600; color: #fff;">外研版 (WY) 初中英语七年级上册</span>
+          <span style="font-size: 0.8rem; color: var(--muted); margin-left: 0.5rem;">全册核心单元、精读课文与语法笔记库</span>
+        </div>
+        <div style="font-size: 0.85rem; color: #34d399;">
+          已录入 6 大教材专项资源
+        </div>
+      </div>
+
+      <div class="materials-grid" id="materials-container"></div>
+    </div>
+
+    <!-- VIEW 3: Sentences Breakdown -->
+    <div id="view-sentences" class="section-view">
+      <div class="sentence-box">
+        <h3 style="color: #fff; font-size: 1.1rem;">经典教材长难句“抓主干·剥挂件”剖析</h3>
+        <p style="color: var(--muted); font-size: 0.85rem;">来自外研七上精读课文《那山那人那狗》与《Emma in the library》：</p>
+        
+        <div class="sentence-original">
+          "Along the mountain path, a handsome young man walks quickly, while a serious-looking old man follows behind him."
+        </div>
+
+        <div class="tree-block">
+          <div><strong style="color: #fff;">句型定位：</strong> 并列复合句 (while 表对比)</div>
+          <div><span class="tree-highlight-prep">【方位状语挂件】</span> Along the mountain path (沿着山路)</div>
+          <div><span class="tree-highlight-core">【主句主干 1】</span> a handsome young man <span style="color: #f43f5e;">walks</span> quickly (年轻男人快步走)</div>
+          <div><span class="tree-highlight-sub">【对比连词】</span> while (而，与此同时)</div>
+          <div><span class="tree-highlight-core">【主句主干 2】</span> a serious-looking old man <span style="color: #f43f5e;">follows</span> behind him (面容严肃的老人跟在身后)</div>
+          <div style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--muted);">
+            💡 核心考点：一般现在时第三人称单数 (walks / follows)、复合形容词 (serious-looking)、方位介词 (behind him)。
+          </div>
+        </div>
+
+        <div class="sentence-original" style="margin-top: 1rem;">
+          "The scientist who won the Nobel Prize spent over thirty years conducting experiments in his laboratory."
+        </div>
+
+        <div class="tree-block">
+          <div><strong style="color: #fff;">句型定位：</strong> 主从复合句 (who 引导定语从句修饰先行词)</div>
+          <div><span class="tree-highlight-core">【主句主语】</span> The scientist (科学家)</div>
+          <div><span class="tree-highlight-sub">【定语从句挂件】</span> who won the Nobel Prize (荣获诺贝尔奖的)</div>
+          <div><span class="tree-highlight-core">【主句谓语+宾语】</span> <span style="color: #f43f5e;">spent</span> over thirty years (花费了三十余年)</div>
+          <div><span class="tree-highlight-prep">【方式与地点挂件】</span> conducting experiments in his laboratory (在实验室做实验)</div>
+          <div style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--muted);">
+            💡 核心考点：spend time doing sth 搭配、定语从句关系代词 who 的用法。
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Embedded core knowledge graph data
+    const chaptersData = [
+      {
+        "id": "chap_01",
+        "chapter_name": "第1章 名词 (Noun)",
+        "page_range": "P6-P17",
+        "points": [
+          {"id": "chap_01_p01", "name": "可数名词与不可数名词分类", "subpoints": ["个体/集体名词", "物质/抽象名词判定"], "prereq": "基础词性识别"},
+          {"id": "chap_01_p02", "name": "名词复数规则变化 (-s/-es/变y为i/变f为v)", "subpoints": ["以s,sh,ch,x结尾加es", "辅音+y变i加es"], "prereq": "单复数概念"},
+          {"id": "chap_01_p03", "name": "不规则名词复数 (man->men, child->children)", "subpoints": ["单复同形 (sheep, deer)", "外来词与特殊词"], "prereq": "规则复数"},
+          {"id": "chap_01_p04", "name": "名词所有格 ('s 与 of 所有格)", "subpoints": ["有生命's", "无生命of", "双重所有格"], "prereq": "名词修饰"}
+        ]
+      },
+      {
+        "id": "chap_02",
+        "chapter_name": "第2章 冠词 (Article)",
+        "page_range": "P18-P23",
+        "points": [
+          {"id": "chap_02_p01", "name": "不定冠词 a/an 的用法与读音辨析", "subpoints": ["元音音素前用an (an hour, a university)"], "prereq": "国际音标元音"},
+          {"id": "chap_02_p02", "name": "定冠词 the 的特指与固定用法", "subpoints": ["特指双方已知", "独一无二事物", "乐器前加the"], "prereq": "a/an 泛指概念"},
+          {"id": "chap_02_p03", "name": "零冠词的常见场景", "subpoints": ["三餐、球类、季节、学科前通常不用冠词"], "prereq": "冠词分类"}
+        ]
+      },
+      {
+        "id": "chap_03",
+        "chapter_name": "第3章 代词 (Pronoun)",
+        "page_range": "P24-P37",
+        "points": [
+          {"id": "chap_03_p01", "name": "人称代词主格与宾格", "subpoints": ["主格作主语", "动词/介词后用宾格"], "prereq": "主谓宾概念"},
+          {"id": "chap_03_p02", "name": "形容词性与名词性物主代词", "subpoints": ["形物代+名词", "名物代=形物代+名词"], "prereq": "名词所有格"},
+          {"id": "chap_03_p03", "name": "反身代词 (-self / -selves)", "subpoints": ["主语宾语同人", "固定搭配 enjoy oneself"], "prereq": "人称代词"},
+          {"id": "chap_03_p04", "name": "不定代词辨析 (some/any, both/all, neither/none)", "subpoints": ["some用于肯定句/委婉疑问", "三者及以上的全体与否定"], "prereq": "单复数概念"}
+        ]
+      },
+      {
+        "id": "chap_04",
+        "chapter_name": "第4章 数词 (Numeral)",
+        "page_range": "P38-P43",
+        "points": [
+          {"id": "chap_04_p01", "name": "基数词构成与大数字表达", "subpoints": ["百千百万单位", "几十几连字符"], "prereq": "基础计数"},
+          {"id": "chap_04_p02", "name": "序数词规则与特殊变化", "subpoints": ["first, second, third 特殊", "基变序口诀"], "prereq": "基数词"},
+          {"id": "chap_04_p03", "name": "分数、百分数、时间与日期表达", "subpoints": ["分子基数母序数", "时间逆读法"], "prereq": "序数词"}
+        ]
+      },
+      {
+        "id": "chap_05",
+        "chapter_name": "第5章 介词 (Preposition)",
+        "page_range": "P44-P57",
+        "points": [
+          {"id": "chap_05_p01", "name": "时间介词 at/on/in/for/since 辨析", "subpoints": ["at点钟", "on具体某天", "in年/月/季节"], "prereq": "时间表达"},
+          {"id": "chap_05_p02", "name": "地点与方位介词 (in/on/at/under/behind/across)", "subpoints": ["across表面穿过", "through空间穿过"], "prereq": "空间认知"},
+          {"id": "chap_05_p03", "name": "动词与介词的固定搭配", "subpoints": ["look for/after", "wait for", "listen to"], "prereq": "常用动词"}
+        ]
+      },
+      {
+        "id": "chap_06",
+        "chapter_name": "第6章 动词：情态动词与非谓语",
+        "page_range": "P58-P71",
+        "points": [
+          {"id": "chap_06_p01", "name": "情态动词 can/may/must/should 基本用法", "subpoints": ["能力、许可、必须、应当"], "prereq": "助动词概念"},
+          {"id": "chap_06_p02", "name": "情态动词表推测 (must be / can't be / may be)", "subpoints": ["肯定推测", "否定推测 can't"], "prereq": "基本情态动词"},
+          {"id": "chap_06_p03", "name": "动名词 doing (动词作主语/宾语)", "subpoints": ["enjoy/finish/mind doing", "介词后加ing"], "prereq": "名词功能"},
+          {"id": "chap_06_p04", "name": "动词不定式 to do (作宾语/目的状语/宾补)", "subpoints": ["decide to do", "使役感官动词省略to"], "prereq": "句子基本成分"}
+        ]
+      },
+      {
+        "id": "chap_07",
+        "chapter_name": "第7章 形容词与副词 (Adj & Adv)",
+        "page_range": "P72-P81",
+        "points": [
+          {"id": "chap_07_p01", "name": "形容词与副词的基本位置与修饰关系", "subpoints": ["形容词修饰名词/作表语", "副词修饰动词/形容词"], "prereq": "词性认知"},
+          {"id": "chap_07_p02", "name": "比较级与最高级的规则与不规则变化", "subpoints": ["-er/-est 与 more/most", "good->better->best"], "prereq": "音节概念"},
+          {"id": "chap_07_p03", "name": "核心比较句型 (as...as / the more... the more...)", "subpoints": ["同级比较原级", "越...越...结构"], "prereq": "比较级构成"}
+        ]
+      },
+      {
+        "id": "chap_08",
+        "chapter_name": "第8章 动词时态与语态 (Tenses & Voice)",
+        "page_range": "P82-P99",
+        "points": [
+          {"id": "chap_08_p01", "name": "一般现在时与第三人称单数 (do/does)", "subpoints": ["客观真理", "经常性习惯动作"], "prereq": "人称代词"},
+          {"id": "chap_08_p02", "name": "现在进行时 (be + doing)", "subpoints": ["说话当下正在发生", "look/listen 标志词"], "prereq": "be动词变形"},
+          {"id": "chap_08_p03", "name": "一般过去时与不规则动词过去式", "subpoints": ["yesterday/ago 标志", "常见不规则表"], "prereq": "一般现在时"},
+          {"id": "chap_08_p04", "name": "一般将来时 (will do / be going to do)", "subpoints": ["计划打算 vs 预测倾向"], "prereq": "时间标志词"},
+          {"id": "chap_08_p05", "name": "过去进行时 (was/were + doing)", "subpoints": ["过去某一特定时刻正在发生"], "prereq": "现在进行时与过去时"},
+          {"id": "chap_08_p06", "name": "现在完成时 (have/has + done)", "subpoints": ["过去发生对现在产生的影响", "持续性动作与瞬间动词区分"], "prereq": "过去分词"},
+          {"id": "chap_08_p07", "name": "被动语态核心结构 (be + done)", "subpoints": ["一般现在/过去时被动", "情态动词被动"], "prereq": "主谓宾与过去分词"}
+        ]
+      },
+      {
+        "id": "chap_09",
+        "chapter_name": "第9章 简单句与主谓一致",
+        "page_range": "P100-P111",
+        "points": [
+          {"id": "chap_09_p01", "name": "五大基本句型 (主谓/主谓宾/主系表/主谓双宾/主谓宾补)", "subpoints": ["及物不及物区分", "连系动词清单"], "prereq": "句子基本成分"},
+          {"id": "chap_09_p02", "name": "There be 句型与就近原则", "subpoints": ["There is a pen and two books"], "prereq": "be动词与就近原则"},
+          {"id": "chap_09_p03", "name": "主谓一致三大原则 (语法一致/意义一致/就近原则)", "subpoints": ["either...or 就近", "the number of vs a number of"], "prereq": "名词单复数"}
+        ]
+      },
+      {
+        "id": "chap_10",
+        "chapter_name": "第10章 复合句体系 (Complex Sentences)",
+        "page_range": "P112-P127",
+        "points": [
+          {"id": "chap_10_p01", "name": "宾语从句三要素 (连接词/陈述语序/主从时态呼应)", "subpoints": ["that/if/whether", "疑问词引导", "主过从必过原则"], "prereq": "陈述句与主谓宾"},
+          {"id": "chap_10_p02", "name": "状语从句 (时间/条件/原因/让步/结果)", "subpoints": ["主将从现原则 (if/as soon as)", "although不与but连用"], "prereq": "连词分类与时态"},
+          {"id": "chap_10_p03", "name": "定语从句入门 (关系代词 who/which/that)", "subpoints": ["先行词定位", "关系代词在从句中作主语或宾语"], "prereq": "代词与形容词修饰"}
+        ]
+      }
+    ];
+
+    const materialsData = [
+      {
+        tag: "Starter 预备级日常对白",
+        title: "01. 学生日常活动安排与开学准备",
+        desc: "初一第一天入学对白、书包物品识别、日常生活安排与时间表达，围绕李明与妈妈的真实生活场景展开。",
+        focus: "名词单复数识别、基数词与时间表达",
+        pages: "30 页 (试卷去手写版)"
+      },
+      {
+        tag: "亲情精读与表达",
+        title: "02. 温馨家庭瞬间分享与生活点滴",
+        desc: "Family ties 单元阅读与情感表达。围绕家庭瞬间照片展开描述，深度解析经典谚语 A happy family brings success in everything。",
+        focus: "物主代词、形容词修饰、一般现在时",
+        pages: "30 页 (试卷去手写版)"
+      },
+      {
+        tag: "启帆课同步语法笔记",
+        title: "03. 启帆课学习笔记之句型转换与语法",
+        desc: "沈阳出版发行集团外研版七上同步教辅笔记。系统梳理名词、数词、冠词、一般现在时与将来时核心考点，配有句型变换解析。",
+        focus: "第1、2、4、8章 基础语法拓扑",
+        pages: "30 页 (试卷去手写版)"
+      },
+      {
+        tag: "校园小说与精读",
+        title: "04. 埃玛图书馆交友记与校园日常精读",
+        desc: "精读故事 Emma in the library，讲述转学生 Emma 组建写作小组，以及精读短文《那山那人那狗》父子亲情经典片段。",
+        focus: "地点介词、并列连词 while、一般过去时入门",
+        pages: "24 页 (试卷去手写版)"
+      },
+      {
+        tag: "词汇背诵与默写",
+        title: "05. 汉译英核心词汇列表（第三遍乱序）",
+        desc: "全册重点词汇全覆盖，采用乱序编排有效避免位置依赖与记忆疲劳，严格标注词性（n., v., adj., pron., adv.）。",
+        focus: "Starter 至 Unit 6 核心考查词汇",
+        pages: "30 页 (试卷去手写版)"
+      },
+      {
+        tag: "短语与日常交际",
+        title: "06. 汉语词汇学习资料与日常对话搭配",
+        desc: "汇总七上核心功能意念短语：welcome to, learn new things, on the first floor 等，夯实日常口语交际与完形短语基础。",
+        focus: "动词与介词固定搭配、介词短语",
+        pages: "30 页 (试卷去手写版)"
+      }
+    ];
+
+    function renderGrammar(items) {
+      const container = document.getElementById('grammar-container');
+      container.innerHTML = '';
+      
+      let count = 0;
+      items.forEach(ch => {
+        if (!ch.points || ch.points.length === 0) return;
+        count += ch.points.length;
+        
+        const card = document.createElement('div');
+        card.className = 'chapter-card';
+        card.innerHTML = `
+          <div class="chapter-header">
+            <span class="chapter-title">${ch.chapter_name}</span>
+            <span class="chapter-pages">${ch.page_range} (${ch.points.length} 考点)</span>
+          </div>
+          <div class="points-grid">
+            ${ch.points.map(p => `
+              <div class="point-card">
+                <div class="point-name">${p.name}</div>
+                <div class="point-sub">${p.subpoints.join(' · ')}</div>
+                ${p.prereq ? `<div class="point-prereq">前置: ${p.prereq}</div>` : ''}
+              </div>
+            `).join('')}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+      document.getElementById('point-total-count').innerText = count;
+    }
+
+    function renderMaterials() {
+      const container = document.getElementById('materials-container');
+      container.innerHTML = materialsData.map(m => `
+        <div class="mat-card">
+          <span class="mat-tag">${m.tag}</span>
+          <div class="mat-title">${m.title}</div>
+          <div class="mat-desc">${m.desc}</div>
+          <div style="font-size: 0.8rem; color: #60a5fa;">🎯 对应语法：${m.focus}</div>
+          <div class="mat-footer">
+            <span>📚 规格：${m.pages}</span>
+            <span style="color: #34d399;">✓ 已入库</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterGrammar() {
+      const q = document.getElementById('grammar-search').value.toLowerCase().trim();
+      if (!q) {
+        renderGrammar(chaptersData);
+        return;
+      }
+      const filtered = chaptersData.map(ch => {
+        const matchedPoints = ch.points.filter(p => 
+          p.name.toLowerCase().includes(q) ||
+          p.subpoints.some(s => s.toLowerCase().includes(q)) ||
+          ch.chapter_name.toLowerCase().includes(q)
+        );
+        return { ...ch, points: matchedPoints };
+      }).filter(ch => ch.points.length > 0);
+      renderGrammar(filtered);
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.section-view').forEach(v => v.classList.remove('active'));
+      
+      if (tabId === 'grammar') {
+        document.querySelectorAll('.tab-btn')[0].classList.add('active');
+        document.getElementById('view-grammar').classList.add('active');
+      } else if (tabId === 'textbooks') {
+        document.querySelectorAll('.tab-btn')[1].classList.add('active');
+        document.getElementById('view-textbooks').classList.add('active');
+      } else if (tabId === 'sentences') {
+        document.querySelectorAll('.tab-btn')[2].classList.add('active');
+        document.getElementById('view-sentences').classList.add('active');
+      }
+    }
+
+    // Init
+    renderGrammar(chaptersData);
+    renderMaterials();
+  </script>
+</body>
+</html>

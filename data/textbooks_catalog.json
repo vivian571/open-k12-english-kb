@@ -1,0 +1,104 @@
+{
+  "curriculum_standard": "教育部义务教育英语课程标准",
+  "textbook_series": [
+    {
+      "id": "wy_grade7_vol1",
+      "name": "初中英语（外研版 WY）七年级上册",
+      "grade": "七年级（初一上）",
+      "publisher": "外语教学与研究出版社 / 沈阳出版发行集团",
+      "modules": [
+        {
+          "module_id": "starter",
+          "title": "Starter: Get ready & A New Start",
+          "topics": [
+            "初中第一天日常交际与开学问候",
+            "校园与教室物品词汇",
+            "数字与序数词入门",
+            "人称代词主格与 be 动词搭配"
+          ],
+          "grammar_focus": ["chap_01_p01", "chap_02_p01", "chap_03_p01", "chap_04_p01"],
+          "materials": [
+            {
+              "type": "dialogue_and_activity",
+              "title": "学生日常活动安排与开学准备",
+              "pages": 30,
+              "source_file": "试卷去手写_学生日常活动安排.pdf"
+            },
+            {
+              "type": "grammar_notes",
+              "title": "启帆课同步学习笔记：名词、数词与一般现在时",
+              "pages": 30,
+              "source_file": "试卷去手写_启帆课学习笔记编著信息.pdf"
+            }
+          ]
+        },
+        {
+          "module_id": "unit_family",
+          "title": "Unit: Family ties & Loving Moments",
+          "topics": [
+            "家庭成员与亲情瞬间表达",
+            "经典谚语理解（A happy family brings success in everything）",
+            "人物描写与情感表达"
+          ],
+          "grammar_focus": ["chap_03_p02", "chap_07_p01", "chap_08_p01"],
+          "materials": [
+            {
+              "type": "reading_and_expression",
+              "title": "温馨家庭瞬间分享与生活点滴",
+              "pages": 30,
+              "source_file": "试卷去手写_温馨家庭瞬间分享.pdf"
+            }
+          ]
+        },
+        {
+          "module_id": "unit_school_life",
+          "title": "Unit: Emma's library friends & School Life",
+          "topics": [
+            "埃玛图书馆交友与校园生活日常",
+            "兴趣小组组建与协作写作",
+            "电影故事阅读与双语精读（《那山那人那狗》等）"
+          ],
+          "grammar_focus": ["chap_05_p01", "chap_08_p03", "chap_09_p01"],
+          "materials": [
+            {
+              "type": "story_and_reading",
+              "title": "埃玛图书馆交友记与校园日常精读",
+              "pages": 24,
+              "source_file": "试卷去手写_埃玛图书馆交友记.pdf"
+            }
+          ]
+        },
+        {
+          "module_id": "vocabulary_and_phrases",
+          "title": "Vocabulary & Expressions Repository",
+          "topics": [
+            "七年级上册全册核心词汇英汉互译",
+            "乱序高频单词默写与词性标注",
+            "日常交际短语与固定搭配"
+          ],
+          "grammar_focus": ["chap_01_p02", "chap_05_p03", "chap_07_p02"],
+          "materials": [
+            {
+              "type": "vocabulary_list",
+              "title": "汉译英核心词汇列表（乱序背诵与默写表）",
+              "pages": 30,
+              "source_file": "试卷去手写_汉译英词汇列表（第三遍乱序）.pdf"
+            },
+            {
+              "type": "phrases_and_expressions",
+              "title": "汉语词汇学习资料与日常对话搭配表",
+              "pages": 30,
+              "source_file": "试卷去手写_汉语词汇学习资料.pdf"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "comprehensive_grammar_reference": {
+    "source": "初中英语语法体系（手绘全彩扫描版，共127页）",
+    "total_chapters": 10,
+    "total_points": 64,
+    "topics_file": "data/grammar_topics.json"
+  }
+}

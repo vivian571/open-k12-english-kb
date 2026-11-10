@@ -1,29 +1,46 @@
-# Open K-12 English Grammar Knowledge Base & Heuristic Tutor
-# 开源初中英语全量知识库与启发式无痛助教
+# Open K-12 English Knowledge Base (开源初中英语知识库)
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Dataset: OmniEdu](https://img.shields.io/badge/Pedagogy-OmniEdu_arXiv:2609.23088-green.svg)](https://arxiv.org/abs/2609.23088)
-[![MCP Ready](https://img.shields.io/badge/MCP-FastMCP_Ready-purple.svg)](https://modelcontextprotocol.io)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Online-emerald.svg)](https://vivian571.github.io/open-k12-english-kb/)
+[![Curriculum: K-12 English](https://img.shields.io/badge/Curriculum-K--12_English-purple.svg)](https://github.com/vivian571/open-k12-english-kb)
 
-本项目基于 127 页手绘全彩知识体系教材及北京大学等团队发布的 **OmniEdu（arXiv:2609.23088）** 启发式教育模型规范，构建了**全量初中英语语法图谱、10 大语法核心模块、64 个核心考点知识树**以及**针对中国初中生的无痛拆解教学引擎**。
+本项目是一个面向初中阶段（中考体系）的结构化、可检索、可扩展的开源英语知识库。收录了**初中英语全量语法知识图谱（10 大核心专题、64 个必考考点与前置依赖树）**，以及**外研版（WY）七年级上册同步教材与学习资料索引**。
+
+🌐 **在线可视化知识库网站**：[https://vivian571.github.io/open-k12-english-kb/](https://vivian571.github.io/open-k12-english-kb/)
 
 ---
 
-## 🌟 核心特色与架构
+## 📚 知识库核心内容
 
-1. **结构化语法知识图谱（64 个中考考点，拓扑前置关系全标注）**
-   - 覆盖中考英语必考 10 大核心专题：名词、冠词、代词、数词、介词、非谓语动词/情态动词、形容词副词、时态语态、简单句与主谓一致、复合句（宾语/状语/定语从句）。
-   - 每个考点清晰标注其前置依赖知识（Prerequisites），构建学习路径。
+### 1. 中考英语全量语法知识图谱 (64 核心考点)
+数据文件：[`data/grammar_topics.json`](data/grammar_topics.json)
 
-2. **基于 OmniEdu 启发式教学框架（From Solver to Tutor）**
-   - **严禁直接报答案（Non-Leakage）**：根据论文 Stage 4 `sr_8` / `sr_10` 量表，坚决杜绝直接给出完整句型或得数。
-   - **抓主干·拆挂件（Painless Sentence Parsing）**：将复杂长难句先拎出 `[谁 + 做了什么]` 主干，再将从句/介宾短语作为修饰挂件逐层剥离。
-   - **错因诊断先肯定（Preserve Correct Work）**：精准定位孩子草稿的第一个错误点，分流概念盲区（Conceptual Gap）与程序粗心（Procedural Error）。
-   - **三级渐进锦囊（Progressive Hints）**：`💡 锦囊1(线索雷达)` $\rightarrow$ `🧭 锦囊2(关系桥梁)` $\rightarrow$ `🚀 锦囊3(起手第一步)`。
+覆盖初中英语 10 大核心语法专题，每个考点均严格标注了知识层级与前置学习依赖（Prerequisites）：
+- **第 1 章 名词 (P6-P17)**：可数与不可数名词、规则/不规则复数、名词所有格
+- **第 2 章 冠词 (P18-P23)**：不定冠词 a/an、定冠词 the 与零冠词规则
+- **第 3 章 代词 (P24-P37)**：人称/物主/反身代词、不定代词与指示代词
+- **第 4 章 数词 (P38-P43)**：基数词、序数词、分数/倍数及表达规范
+- **第 5 章 介词 (P44-P57)**：时间介词、空间与方位介词、动词固定介词搭配
+- **第 6 章 动词：情态与非谓语 (P58-P71)**：情态动词表推测、动名词 doing、不定式 to do、分词 done
+- **第 7 章 形容词与副词 (P72-P81)**：比较级与最高级规则、特殊比较结构、程度与方式副词
+- **第 8 章 动词时态与语态 (P82-P99)**：8 大核心时态（一般现在/过去/将来，现在/过去进行，现在完成时等）及被动语态
+- **第 9 章 简单句与主谓一致 (P100-P111)**：五大基本句型、主谓一致三大原则（语法/意义/就近）
+- **第 10 章 复合句体系 (P112-P127)**：宾语从句、状语从句、定语从句（关系代词与关系副词）
 
-3. **双形态交互交付**
-   - **单文件交互式沉浸式 Web 工作台**（`k12_english_workbench.html`）：免装环境、支持知识图谱浏览、真题无痛拆解模拟、口诀记忆卡与双向答题。
-   - **MCP (Model Context Protocol) 插件**：可直接接入 Cursor、Claude Desktop、WorkBuddy 等本地 AI 编程客户端。
+---
+
+### 2. 同步教材与学习资料库（外研版 WY 七年级上册）
+数据文件：[`data/textbooks_catalog.json`](data/textbooks_catalog.json)  
+说明文档：[`docs/textbooks/wy_grade7_curriculum.md`](docs/textbooks/wy_grade7_curriculum.md)
+
+收录模块：
+- **Starter 预备级**：学生日常活动安排与开学准备对白
+- **Unit: Family Ties**：温馨家庭瞬间分享、亲情主题精读与经典谚语
+- **Unit: School Life**：埃玛图书馆交友记、写作俱乐部与经典电影双语阅读
+- **同步辅导笔记**：启帆课同步学习笔记（句型转换、名词、数词与一般现在时）
+- **词汇与短语专项**：
+  - 汉译英核心词汇列表（30 页乱序默写版，防机械性疲劳）
+  - 汉语核心词汇与日常对话搭配资料（30 页功能意念短语）
 
 ---
 
@@ -31,44 +48,34 @@
 
 ```
 open-k12-english-kb/
+├── index.html                   # 在线交互式知识库工作台（GitHub Pages 自动托管）
+├── README.md                    # 知识库体系说明
+├── LICENSE                      # Apache-2.0 开源许可协议
+├── .gitignore                   # 忽略配置
 ├── data/
-│   ├── grammar_topics.json       # 10大专题、64考点拓扑知识图谱
-│   └── cards_samples.json        # 精选 64 考点速记口诀与易错避坑卡片
-├── docs/
-│   ├── 01_grammar_knowledge_graph.md   # 知识图谱与中考前置拓扑说明书
-│   └── 02_omniedu_pedagogy_guide.md    # OmniEdu 启发式拆解规范手册
-├── scripts/
-│   ├── tutor_engine.py          # 启发式教学推理核心脚本（CLI + API 联动）
-│   └── export_cards.py          # 导出 Markdown / Anki 格式卡片工具
-├── k12_english_workbench.html   # 可视化交互式学习工作台 (单文件直接双击运行)
-├── pyproject.toml               # Python 项目配置
-└── README.md                    # 本文档
+│   ├── grammar_topics.json      # 10 大专题 64 个考点拓扑图谱
+│   └── textbooks_catalog.json   # 外研版七年级上册教材与资料元数据
+└── docs/
+    ├── CONTRIBUTING.md          # 资料补充与更新贡献规范
+    └── textbooks/
+        └── wy_grade7_curriculum.md # 外研版七上教材详细分析
 ```
 
 ---
 
-## 🚀 快速开始
+## 🌐 访问可视化交互工作台
 
-### 方式一：直接在浏览器打开交互式工作台
-打开 `k12_english_workbench.html` 即可使用，无需本地安装 Python 或 Node。
+项目已配置 GitHub Pages，支持直接通过浏览器打开：
+👉 [https://vivian571.github.io/open-k12-english-kb/](https://vivian571.github.io/open-k12-english-kb/)
 
-### 方式二：使用 CLI 启发式助教
-```bash
-# 诊断一道英语填空/改错
-python3 scripts/tutor_engine.py plan \
-  --question "I look forward to (hear) from you soon." \
-  --attempt "孩子填了 hear，因为看到前面有个 to" \
-  --grade "八年级"
-
-# 拆解英语阅读长难句
-python3 scripts/tutor_engine.py plan \
-  --question "The scientist who won the Nobel Prize spent over thirty years conducting experiments in his laboratory." \
-  --mode english_reading
-```
+功能包括：
+1. **64 核心考点快速搜索与拓扑树查看**。
+2. **教材与资料模块详细目录与关联语法匹配**。
+3. **长难句“抓主干·剥挂件”语法拆解展示**。
 
 ---
 
-## 📄 引用与致谢
+## 🤝 持续更新与贡献
 
-- **OmniEdu 论文**：[arXiv:2609.23088](https://arxiv.org/abs/2609.23088) *OmniEdu: Open Foundation Models for Learning and Teaching*
-- **官方开源代码**：[haolpku/Omni-Edu](https://github.com/haolpku/Omni-Edu)
+若需补充新课本、新学期材料或专项题库，请查阅 [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md)。
+欢迎提交 Issue 或 Pull Request 扩充知识库！
