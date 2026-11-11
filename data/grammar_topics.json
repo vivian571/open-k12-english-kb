@@ -1,16 +1,36 @@
 {
   "title": "初中英语全量考点知识图谱",
   "source": "初中英语语法.pdf (127页全彩手写与知识树图解)",
-  "total_points": 64,
+  "total_points": 61,
   "chapters": [
     {
       "chapter_id": 1,
       "chapter_name": "名词 (Nouns)",
       "page_range": "1-9",
       "points": [
-        {"id": 1, "name": "可数名词及其单复数变化规则与不规则变化", "page": 1, "prerequisites": []},
-        {"id": 2, "name": "不可数名词的计量与常见易错不可数名词", "page": 4, "prerequisites": [1]},
-        {"id": 3, "name": "名词所有格 ('s 与 of 格及双重所有格)", "page": 6, "prerequisites": [1, 2]}
+        {
+          "id": 1,
+          "name": "可数名词及其单复数变化规则与不规则变化",
+          "page": 1,
+          "prerequisites": []
+        },
+        {
+          "id": 2,
+          "name": "不可数名词的计量与常见易错不可数名词",
+          "page": 4,
+          "prerequisites": [
+            1
+          ]
+        },
+        {
+          "id": 3,
+          "name": "名词所有格 ('s 与 of 格及双重所有格)",
+          "page": 6,
+          "prerequisites": [
+            1,
+            2
+          ]
+        }
       ]
     },
     {
@@ -18,8 +38,20 @@
       "chapter_name": "冠词 (Articles)",
       "page_range": "10-13",
       "points": [
-        {"id": 7, "name": "不定冠词 a / an 的读音判别与泛指用法", "page": 10, "prerequisites": []},
-        {"id": 8, "name": "定冠词 the 的特指与零冠词固定搭配", "page": 11, "prerequisites": [7]}
+        {
+          "id": 7,
+          "name": "不定冠词 a / an 的读音判别与泛指用法",
+          "page": 10,
+          "prerequisites": []
+        },
+        {
+          "id": 8,
+          "name": "定冠词 the 的特指与零冠词固定搭配",
+          "page": 11,
+          "prerequisites": [
+            7
+          ]
+        }
       ]
     },
     {
@@ -27,12 +59,46 @@
       "chapter_name": "代词 (Pronouns)",
       "page_range": "14-23",
       "points": [
-        {"id": 9, "name": "人称代词（主格/宾格）与物主代词（形容词性/名词性）", "page": 14, "prerequisites": []},
-        {"id": 10, "name": "反身代词 (-self / -selves) 的用法与固定搭配", "page": 16, "prerequisites": [9]},
-        {"id": 11, "name": "指示代词 this/that/these/those 与电话/替代用法", "page": 18, "prerequisites": []},
-        {"id": 12, "name": "疑问代词 who/whom/whose/what/which 的用法", "page": 19, "prerequisites": []},
-        {"id": 13, "name": "普通不定代词 some/any/no/every 及其辨析", "page": 20, "prerequisites": []},
-        {"id": 14, "name": "复合不定代词 (someone/anything等) 的形容词后置与单复数", "page": 23, "prerequisites": [13]}
+        {
+          "id": 9,
+          "name": "人称代词（主格/宾格）与物主代词（形容词性/名词性）",
+          "page": 14,
+          "prerequisites": []
+        },
+        {
+          "id": 10,
+          "name": "反身代词 (-self / -selves) 的用法与固定搭配",
+          "page": 16,
+          "prerequisites": [
+            9
+          ]
+        },
+        {
+          "id": 11,
+          "name": "指示代词 this/that/these/those 与电话/替代用法",
+          "page": 18,
+          "prerequisites": []
+        },
+        {
+          "id": 12,
+          "name": "疑问代词 who/whom/whose/what/which 的用法",
+          "page": 19,
+          "prerequisites": []
+        },
+        {
+          "id": 13,
+          "name": "普通不定代词 some/any/no/every 及其辨析",
+          "page": 20,
+          "prerequisites": []
+        },
+        {
+          "id": 14,
+          "name": "复合不定代词 (someone/anything等) 的形容词后置与单复数",
+          "page": 23,
+          "prerequisites": [
+            13
+          ]
+        }
       ]
     },
     {
@@ -40,10 +106,36 @@
       "chapter_name": "数词 (Numerals)",
       "page_range": "24-31",
       "points": [
-        {"id": 15, "name": "基数词的构成规律（几十几、百千大数写法）", "page": 24, "prerequisites": []},
-        {"id": 16, "name": "基数词的用法（时刻表达、年份、编号及百千万确数/概数）", "page": 26, "prerequisites": [15]},
-        {"id": 17, "name": "序数词的缩写与口诀（一二三特殊记，th从四起，八去t九去e）", "page": 28, "prerequisites": [15]},
-        {"id": 18, "name": "序数词的用法（日期、楼层、排行与定冠词搭配）", "page": 30, "prerequisites": [17]}
+        {
+          "id": 15,
+          "name": "基数词的构成规律（几十几、百千大数写法）",
+          "page": 24,
+          "prerequisites": []
+        },
+        {
+          "id": 16,
+          "name": "基数词的用法（时刻表达、年份、编号及百千万确数/概数）",
+          "page": 26,
+          "prerequisites": [
+            15
+          ]
+        },
+        {
+          "id": 17,
+          "name": "序数词的缩写与口诀（一二三特殊记，th从四起，八去t九去e）",
+          "page": 28,
+          "prerequisites": [
+            15
+          ]
+        },
+        {
+          "id": 18,
+          "name": "序数词的用法（日期、楼层、排行与定冠词搭配）",
+          "page": 30,
+          "prerequisites": [
+            17
+          ]
+        }
       ]
     },
     {
@@ -51,10 +143,34 @@
       "chapter_name": "介词 (Prepositions)",
       "page_range": "32-40",
       "points": [
-        {"id": 19, "name": "时间介词 in / on / at 的精准层级划分与固定口诀", "page": 32, "prerequisites": []},
-        {"id": 20, "name": "其他时间介词 (for / since / before / after / by / during)", "page": 33, "prerequisites": [19]},
-        {"id": 21, "name": "方位介词（上下中前后：in/on/at, over/under, above/below, between/among）", "page": 36, "prerequisites": []},
-        {"id": 22, "name": "运动与方向介词 (into/out of, across/through, to/towards)", "page": 38, "prerequisites": [21]}
+        {
+          "id": 19,
+          "name": "时间介词 in / on / at 的精准层级划分与固定口诀",
+          "page": 32,
+          "prerequisites": []
+        },
+        {
+          "id": 20,
+          "name": "其他时间介词 (for / since / before / after / by / during)",
+          "page": 33,
+          "prerequisites": [
+            19
+          ]
+        },
+        {
+          "id": 21,
+          "name": "方位介词（上下中前后：in/on/at, over/under, above/below, between/among）",
+          "page": 36,
+          "prerequisites": []
+        },
+        {
+          "id": 22,
+          "name": "运动与方向介词 (into/out of, across/through, to/towards)",
+          "page": 38,
+          "prerequisites": [
+            21
+          ]
+        }
       ]
     },
     {
@@ -62,13 +178,55 @@
       "chapter_name": "动词与非谓语动词 (Verbs & Non-Finite Forms)",
       "page_range": "41-52",
       "points": [
-        {"id": 25, "name": "只接不定式 (to do) 的高频动词口诀与用法", "page": 41, "prerequisites": []},
-        {"id": 26, "name": "只接动名词 (doing) 的高频动词或短语 (enjoy, finish, practice等)", "page": 43, "prerequisites": []},
-        {"id": 27, "name": "既可接 to do 又可接 doing 但含义截然相反的动词 (remember/forget/stop等)", "page": 45, "prerequisites": [25, 26]},
-        {"id": 28, "name": "动词短语的四种搭配类型 (动+副代词放中间等)", "page": 46, "prerequisites": []},
-        {"id": 29, "name": "情态动词表能力、允许与推测 (can/could, may/might, must/can't)", "page": 47, "prerequisites": []},
-        {"id": 30, "name": "情态动词表示请求与委婉问答 (Could/Would you please...)", "page": 50, "prerequisites": [29]},
-        {"id": 31, "name": "情态动词表示建议 (shall, should, had better)", "page": 51, "prerequisites": [29]}
+        {
+          "id": 25,
+          "name": "只接不定式 (to do) 的高频动词口诀与用法",
+          "page": 41,
+          "prerequisites": []
+        },
+        {
+          "id": 26,
+          "name": "只接动名词 (doing) 的高频动词或短语 (enjoy, finish, practice等)",
+          "page": 43,
+          "prerequisites": []
+        },
+        {
+          "id": 27,
+          "name": "既可接 to do 又可接 doing 但含义截然相反的动词 (remember/forget/stop等)",
+          "page": 45,
+          "prerequisites": [
+            25,
+            26
+          ]
+        },
+        {
+          "id": 28,
+          "name": "动词短语的四种搭配类型 (动+副代词放中间等)",
+          "page": 46,
+          "prerequisites": []
+        },
+        {
+          "id": 29,
+          "name": "情态动词表能力、允许与推测 (can/could, may/might, must/can't)",
+          "page": 47,
+          "prerequisites": []
+        },
+        {
+          "id": 30,
+          "name": "情态动词表示请求与委婉问答 (Could/Would you please...)",
+          "page": 50,
+          "prerequisites": [
+            29
+          ]
+        },
+        {
+          "id": 31,
+          "name": "情态动词表示建议 (shall, should, had better)",
+          "page": 51,
+          "prerequisites": [
+            29
+          ]
+        }
       ]
     },
     {
@@ -76,11 +234,44 @@
       "chapter_name": "形容词与副词 (Adjectives & Adverbs)",
       "page_range": "53-62",
       "points": [
-        {"id": 33, "name": "形容词与副词的句法功能与位置差异", "page": 53, "prerequisites": []},
-        {"id": 34, "name": "形容词变副词的拼写与规则变异口诀", "page": 54, "prerequisites": [33]},
-        {"id": 35, "name": "易混淆同形或相似副词辨析 (hard/hardly, late/lately等)", "page": 56, "prerequisites": [34]},
-        {"id": 36, "name": "形容词与副词比较级和最高级的规则与不规则变形", "page": 56, "prerequisites": [33]},
-        {"id": 37, "name": "比较等级三大核心句型 (原级 as...as, 比较级 the more, the more, 最高级范围)", "page": 59, "prerequisites": [36]}
+        {
+          "id": 33,
+          "name": "形容词与副词的句法功能与位置差异",
+          "page": 53,
+          "prerequisites": []
+        },
+        {
+          "id": 34,
+          "name": "形容词变副词的拼写与规则变异口诀",
+          "page": 54,
+          "prerequisites": [
+            33
+          ]
+        },
+        {
+          "id": 35,
+          "name": "易混淆同形或相似副词辨析 (hard/hardly, late/lately等)",
+          "page": 56,
+          "prerequisites": [
+            34
+          ]
+        },
+        {
+          "id": 36,
+          "name": "形容词与副词比较级和最高级的规则与不规则变形",
+          "page": 56,
+          "prerequisites": [
+            33
+          ]
+        },
+        {
+          "id": 37,
+          "name": "比较等级三大核心句型 (原级 as...as, 比较级 the more, the more, 最高级范围)",
+          "page": 59,
+          "prerequisites": [
+            36
+          ]
+        }
       ]
     },
     {
@@ -88,15 +279,80 @@
       "chapter_name": "动词时态与语态 (Tenses & Voices)",
       "page_range": "63-82",
       "points": [
-        {"id": 38, "name": "一般现在时（第三人称单数变形与标志词）", "page": 63, "prerequisites": []},
-        {"id": 39, "name": "一般过去时（规则/不规则动词过去式与标志词）", "page": 65, "prerequisites": [38]},
-        {"id": 40, "name": "一般将来时 (will vs. be going to 区别与现在进行表将来)", "page": 67, "prerequisites": [38]},
-        {"id": 41, "name": "现在进行时 (be + doing 结构与瞬间动词限制)", "page": 69, "prerequisites": [38]},
-        {"id": 42, "name": "过去进行时 (was/were + doing 与 when/while 结合)", "page": 71, "prerequisites": [39, 41]},
-        {"id": 43, "name": "现在完成时 (have/has + done 核心结构、已完成 vs. 持续性动词转换)", "page": 74, "prerequisites": [38, 39]},
-        {"id": 44, "name": "过去完成时 (had + done '过去的过去'时间轴)", "page": 77, "prerequisites": [39, 43]},
-        {"id": 45, "name": "被动语态核心结构 (be + done) 与不带 to 的不定式变被动", "page": 79, "prerequisites": [38, 39]},
-        {"id": 46, "name": "八大不同时态下的被动语态变形表", "page": 81, "prerequisites": [45]}
+        {
+          "id": 38,
+          "name": "一般现在时（第三人称单数变形与标志词）",
+          "page": 63,
+          "prerequisites": []
+        },
+        {
+          "id": 39,
+          "name": "一般过去时（规则/不规则动词过去式与标志词）",
+          "page": 65,
+          "prerequisites": [
+            38
+          ]
+        },
+        {
+          "id": 40,
+          "name": "一般将来时 (will vs. be going to 区别与现在进行表将来)",
+          "page": 67,
+          "prerequisites": [
+            38
+          ]
+        },
+        {
+          "id": 41,
+          "name": "现在进行时 (be + doing 结构与瞬间动词限制)",
+          "page": 69,
+          "prerequisites": [
+            38
+          ]
+        },
+        {
+          "id": 42,
+          "name": "过去进行时 (was/were + doing 与 when/while 结合)",
+          "page": 71,
+          "prerequisites": [
+            39,
+            41
+          ]
+        },
+        {
+          "id": 43,
+          "name": "现在完成时 (have/has + done 核心结构、已完成 vs. 持续性动词转换)",
+          "page": 74,
+          "prerequisites": [
+            38,
+            39
+          ]
+        },
+        {
+          "id": 44,
+          "name": "过去完成时 (had + done '过去的过去'时间轴)",
+          "page": 77,
+          "prerequisites": [
+            39,
+            43
+          ]
+        },
+        {
+          "id": 45,
+          "name": "被动语态核心结构 (be + done) 与不带 to 的不定式变被动",
+          "page": 79,
+          "prerequisites": [
+            38,
+            39
+          ]
+        },
+        {
+          "id": 46,
+          "name": "八大不同时态下的被动语态变形表",
+          "page": 81,
+          "prerequisites": [
+            45
+          ]
+        }
       ]
     },
     {
@@ -104,12 +360,50 @@
       "chapter_name": "简单句与主谓一致 (Simple Sentences & Subject-Verb Agreement)",
       "page_range": "83-90",
       "points": [
-        {"id": 47, "name": "There be 句型的基本结构与时态变化", "page": 83, "prerequisites": []},
-        {"id": 48, "name": "There be 句型的就近原则", "page": 84, "prerequisites": [47]},
-        {"id": 49, "name": "疑问句（一般疑问句、特殊疑问句与选择疑问句）", "page": 85, "prerequisites": []},
-        {"id": 50, "name": "反意疑问句 (Tag Questions) 的前肯后否与特例口诀", "page": 86, "prerequisites": [49]},
-        {"id": 51, "name": "祈使句与感叹句 (What 与 How 感叹句结构口诀)", "page": 88, "prerequisites": []},
-        {"id": 52, "name": "主谓一致三大原则（语法一致、意义一致与就近原则）", "page": 89, "prerequisites": [1, 9, 38]}
+        {
+          "id": 47,
+          "name": "There be 句型的基本结构与时态变化",
+          "page": 83,
+          "prerequisites": []
+        },
+        {
+          "id": 48,
+          "name": "There be 句型的就近原则",
+          "page": 84,
+          "prerequisites": [
+            47
+          ]
+        },
+        {
+          "id": 49,
+          "name": "疑问句（一般疑问句、特殊疑问句与选择疑问句）",
+          "page": 85,
+          "prerequisites": []
+        },
+        {
+          "id": 50,
+          "name": "反意疑问句 (Tag Questions) 的前肯后否与特例口诀",
+          "page": 86,
+          "prerequisites": [
+            49
+          ]
+        },
+        {
+          "id": 51,
+          "name": "祈使句与感叹句 (What 与 How 感叹句结构口诀)",
+          "page": 88,
+          "prerequisites": []
+        },
+        {
+          "id": 52,
+          "name": "主谓一致三大原则（语法一致、意义一致与就近原则）",
+          "page": 89,
+          "prerequisites": [
+            1,
+            9,
+            38
+          ]
+        }
       ]
     },
     {
@@ -117,14 +411,131 @@
       "chapter_name": "复合句 (Complex Sentences)",
       "page_range": "91-114",
       "points": [
-        {"id": 53, "name": "直接引语变间接引语（人称、时态、指示代词与状语转换）", "page": 91, "prerequisites": [38, 39]},
-        {"id": 54, "name": "宾语从句三要素：连接词选择、陈述语序、主过从过与客观真理例外", "page": 94, "prerequisites": [49, 53]},
-        {"id": 55, "name": "时间状语从句（when, while, as, as soon as '主将从现'原则）", "page": 96, "prerequisites": [40]},
-        {"id": 56, "name": "条件状语从句 (if / unless 与 '主将从现' 联动)", "page": 98, "prerequisites": [40]},
-        {"id": 57, "name": "让步状语从句 (although/though 与 but 绝不连用原则)", "page": 99, "prerequisites": []},
-        {"id": 58, "name": "原因、结果与目的状语从句 (because vs so, so...that, so that)", "page": 100, "prerequisites": []},
-        {"id": 59, "name": "定语从句关系代词 (that, which, who, whom, whose 选词秘诀)", "page": 104, "prerequisites": []},
-        {"id": 60, "name": "定语从句关系副词 (where, when, why 的还原法判断)", "page": 106, "prerequisites": [59]}
+        {
+          "id": 53,
+          "name": "直接引语变间接引语（人称、时态、指示代词与状语转换）",
+          "page": 91,
+          "prerequisites": [
+            38,
+            39
+          ]
+        },
+        {
+          "id": 54,
+          "name": "宾语从句三要素：连接词选择、陈述语序、主过从过与客观真理例外",
+          "page": 94,
+          "prerequisites": [
+            49,
+            53
+          ]
+        },
+        {
+          "id": 55,
+          "name": "时间状语从句（when, while, as, as soon as '主将从现'原则）",
+          "page": 96,
+          "prerequisites": [
+            40
+          ]
+        },
+        {
+          "id": 56,
+          "name": "条件状语从句 (if / unless 与 '主将从现' 联动)",
+          "page": 98,
+          "prerequisites": [
+            40
+          ]
+        },
+        {
+          "id": 57,
+          "name": "让步状语从句 (although/though 与 but 绝不连用原则)",
+          "page": 99,
+          "prerequisites": []
+        },
+        {
+          "id": 58,
+          "name": "原因、结果与目的状语从句 (because vs so, so...that, so that)",
+          "page": 100,
+          "prerequisites": []
+        },
+        {
+          "id": 59,
+          "name": "定语从句关系代词 (that, which, who, whom, whose 选词秘诀)",
+          "page": 104,
+          "prerequisites": []
+        },
+        {
+          "id": 60,
+          "name": "定语从句关系副词 (where, when, why 的还原法判断)",
+          "page": 106,
+          "prerequisites": [
+            59
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": 13,
+      "chapter_name": "七下外研版 (WY) 单元语法与中考话题核心考点",
+      "page_range": "七下 Unit 1 - Unit 6",
+      "points": [
+        {
+          "id": 65,
+          "code": "chap_13_p01",
+          "name": "一般过去时核心法则（be动词 was/were、不规则动词过去式与过去时间状语）",
+          "prerequisites": [
+            27
+          ]
+        },
+        {
+          "id": 66,
+          "code": "chap_13_p02",
+          "name": "不定代词与复合不定代词综合辨析（some/any, both/neither, 复合词形容词后置）",
+          "prerequisites": [
+            13,
+            14
+          ]
+        },
+        {
+          "id": 67,
+          "code": "chap_13_p03",
+          "name": "连系动词体系分类与表语结构（look/sound/smell/taste/feel 及 变化/保持动词）",
+          "prerequisites": [
+            24
+          ]
+        },
+        {
+          "id": 68,
+          "code": "chap_13_p04",
+          "name": "祈使句与倡议表达（Do/Don't/Let's 及 动名词作主语/宾语）",
+          "prerequisites": [
+            38
+          ]
+        },
+        {
+          "id": 69,
+          "code": "chap_13_p05",
+          "name": "形容词与副词比较级与最高级进阶（规则/不规则变化与 the + 最高级 + of/in 范围）",
+          "prerequisites": [
+            25,
+            26
+          ]
+        },
+        {
+          "id": 70,
+          "code": "chap_13_p06",
+          "name": "同级比较句型 as...as 与否定形式 not as/so...as",
+          "prerequisites": [
+            25
+          ]
+        },
+        {
+          "id": 71,
+          "code": "chap_13_p07",
+          "name": "七下高频动词短语与修辞手法国考考点 (can't wait to do, look forward to doing, 双关修辞)",
+          "prerequisites": [
+            37
+          ]
+        }
       ]
     }
   ]

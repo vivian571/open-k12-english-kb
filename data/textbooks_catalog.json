@@ -16,7 +16,12 @@
             "数字与序数词入门",
             "人称代词主格与 be 动词搭配"
           ],
-          "grammar_focus": ["chap_01_p01", "chap_02_p01", "chap_03_p01", "chap_04_p01"],
+          "grammar_focus": [
+            "chap_01_p01",
+            "chap_02_p01",
+            "chap_03_p01",
+            "chap_04_p01"
+          ],
           "materials": [
             {
               "type": "dialogue_and_activity",
@@ -40,7 +45,11 @@
             "经典谚语理解（A happy family brings success in everything）",
             "人物描写与情感表达"
           ],
-          "grammar_focus": ["chap_03_p02", "chap_07_p01", "chap_08_p01"],
+          "grammar_focus": [
+            "chap_03_p02",
+            "chap_07_p01",
+            "chap_08_p01"
+          ],
           "materials": [
             {
               "type": "reading_and_expression",
@@ -58,7 +67,11 @@
             "兴趣小组组建与协作写作",
             "电影故事阅读与双语精读（《那山那人那狗》等）"
           ],
-          "grammar_focus": ["chap_05_p01", "chap_08_p03", "chap_09_p01"],
+          "grammar_focus": [
+            "chap_05_p01",
+            "chap_08_p03",
+            "chap_09_p01"
+          ],
           "materials": [
             {
               "type": "story_and_reading",
@@ -76,7 +89,11 @@
             "乱序高频单词默写与词性标注",
             "日常交际短语与固定搭配"
           ],
-          "grammar_focus": ["chap_01_p02", "chap_05_p03", "chap_07_p02"],
+          "grammar_focus": [
+            "chap_01_p02",
+            "chap_05_p03",
+            "chap_07_p02"
+          ],
           "materials": [
             {
               "type": "vocabulary_list",
@@ -89,6 +106,137 @@
               "title": "汉语词汇学习资料与日常对话搭配表",
               "pages": 30,
               "source_file": "试卷去手写_汉语词汇学习资料.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wy_grade7_vol2",
+      "name": "初中英语（外研版 WY）七年级下册",
+      "grade": "七年级（初一下）",
+      "publisher": "外语教学与研究出版社 / 济南出版社",
+      "modules": [
+        {
+          "module_id": "unit_1_happiness",
+          "title": "Unit 1: The secrets of happiness (幸福的奥秘)",
+          "topics": [
+            "物质匮乏，爱却丰盈 (Poor in things, rich in love)",
+            "如何以积极的方式看待事物 (How to look at things in a bright way)",
+            "培养幸福感短文写作 (Growing happiness)"
+          ],
+          "grammar_focus": [
+            "chap_13_p01"
+          ],
+          "materials": [
+            {
+              "type": "notebook_and_guide",
+              "title": "课堂英语学习笔记七年级下册（外研版精编）",
+              "pages": 30,
+              "source_file": "试卷去手写_20261111_101615.pdf"
+            }
+          ]
+        },
+        {
+          "module_id": "unit_2_sports",
+          "title": "Unit 2: Go for it! (放手去干 & 铿锵玫瑰)",
+          "topics": [
+            "最后但同样重要 (Last but not least)",
+            "中国女足精神与体育瞬间 (The Steel Roses of China)",
+            "优秀运动员经历与肯定性回复"
+          ],
+          "grammar_focus": [
+            "chap_13_p02"
+          ],
+          "materials": [
+            {
+              "type": "notebook_and_guide",
+              "title": "课堂英语学习笔记七年级下册·Unit 2 专项",
+              "pages": 30,
+              "source_file": "试卷去手写_20261111_101615.pdf"
+            }
+          ]
+        },
+        {
+          "module_id": "unit_3_food",
+          "title": "Unit 3: Food matters (食物很重要)",
+          "topics": [
+            "美味的回忆 (Delicious memories)",
+            "均衡饮食与健康生活方式 (A balanced diet)",
+            "跨越国界的食物文化 (Food across borders)"
+          ],
+          "grammar_focus": [
+            "chap_13_p03"
+          ],
+          "materials": [
+            {
+              "type": "notebook_and_guide",
+              "title": "课堂英语学习笔记七年级下册·Unit 3 专项",
+              "pages": 30,
+              "source_file": "试卷去手写_20261111_101615.pdf"
+            }
+          ]
+        },
+        {
+          "module_id": "unit_4_fun",
+          "title": "Unit 4: The art of having fun (娱乐的艺术)",
+          "topics": [
+            "只工作不玩耍，聪明孩子也变傻 (All work and no play makes Jack a dull boy)",
+            "吉尼斯世界纪录与成都华希昆虫博物馆巨蚊探秘",
+            "把兴趣转化为事业 (Turning an interest into a career)",
+            "警惕吞噬时间的怪物 (The time-eating monster)"
+          ],
+          "grammar_focus": [
+            "chap_13_p04"
+          ],
+          "materials": [
+            {
+              "type": "textbook_and_notes",
+              "title": "七下 Unit 4 The art of having fun 教材全解（去手写版）",
+              "pages": 30,
+              "source_file": "试卷去手写_20261111_102121.pdf"
+            }
+          ]
+        },
+        {
+          "module_id": "unit_5_nature",
+          "title": "Unit 5: Amazing nature (奇妙的大自然)",
+          "topics": [
+            "家乡的色彩与自然之美 (Colours of my hometown)",
+            "大自然中奇妙的生命现象 (Amazing life in nature)",
+            "大声呼救的自然奇观与环保警示 (Natural wonders crying aloud for help)"
+          ],
+          "grammar_focus": [
+            "chap_13_p05"
+          ],
+          "materials": [
+            {
+              "type": "notebook_and_guide",
+              "title": "课堂英语学习笔记七年级下册·Unit 5 专项",
+              "pages": 30,
+              "source_file": "试卷去手写_20261111_101615.pdf"
+            }
+          ]
+        },
+        {
+          "module_id": "unit_6_travel",
+          "title": "Unit 6: Hitting the road (踏上旅途与中国文化)",
+          "topics": [
+            "热辣四川火锅与三星堆博物馆的双关修辞 (Hot and cool)",
+            "中国入乡随俗格言 (When in China, do as the Chinese do)",
+            "千古奇人徐霞客与伟大探险家张骞、玄奘 (Exploring the unexplored)",
+            "旅行博客与未来旅行计划 (A travel vlogger and his vlog)"
+          ],
+          "grammar_focus": [
+            "chap_13_p06",
+            "chap_13_p07"
+          ],
+          "materials": [
+            {
+              "type": "textbook_language_notes",
+              "title": "七下 Unit 6 核心课文语言点与文化阅读（去手写清爽版）",
+              "pages": 25,
+              "source_file": "试卷去手写_20261111_102605.pdf"
             }
           ]
         }

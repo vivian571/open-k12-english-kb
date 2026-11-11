@@ -2796,6 +2796,668 @@
           "explanation": "分析：解答【定语从句关系副词 (where, when, why 的还原法判断)】相关题目时，关键在于结合上下文语境、时间标志词与句子核心结构进行逻辑推导，避免机械字面直译。故选 B。"
         }
       ]
+    },
+    "chap_13_p01": {
+      "id": "chap_13_p01",
+      "name": "一般过去时核心法则（be动词 was/were、不规则动词过去式与过去时间状语）",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 1 P2 · 试卷去手写 Unit 1 语法精讲",
+      "citations": [
+        {
+          "source": "试卷去手写_20261111_102605.pdf P1 (Unit 1 语法精要)",
+          "text": "一般过去时 (Simple Past Tense) 用于描述过去某个时间里发生的动作或状态，以及过去习惯性、经常性的动作或行为。表达出生相关的信息：I was born in a small village. They were born in the same year. be 动词过去式：am/is -> was, are -> were。疑问句：Were you born in 2008?",
+          "note": "时间状语标志词：in 2008, from 1797 to 1801, yesterday, last week, three days ago, just now 等。"
+        },
+        {
+          "source": "课堂英语学习笔记七年级下册 (Unit 1 Reading)",
+          "text": "Poor in things, rich in love: He was poor as a boy, but his parents gave him immense love.",
+          "note": "动词过去式不规则变化：give -> gave, see -> saw, buy -> bought, go -> went, come -> came。"
+        }
+      ],
+      "rules": [
+        "be 动词过去式两形式：主语是 I / he / she / it / 单数名词时用 was；主语是 you / we / they / 复数名词时用 were。",
+        "实义动词规则变化四部曲：一般加 -ed (worked)；以 e 结尾加 -d (lived)；辅音+y 变 i 加 -ed (studied)；重读闭音节双写尾字母加 -ed (stopped, planned)。",
+        "实义动词疑问与否定句：借用助动词 did，后接动词原形 (Did you go...? I didn't see...)."
+      ],
+      "pitfalls": "【高频陷阱】：在含有 did 或 didn't 的疑问句与否定句中，实义动词忘记变回原形！如误写成 *Did you went there?*（正确为 Did you go there?）。",
+      "exercises": [
+        {
+          "question": "— Where ______ you born, Tony? \n— I ______ born in Cambridge, England in 2009.",
+          "options": [
+            "A. were; was",
+            "B. was; were",
+            "C. are; am",
+            "D. was; was"
+          ],
+          "answer": 0,
+          "explanation": "解析：主语 you 为第二人称，be 动词过去式用 were；答语主语 I 为第一人称单数，be 动词过去式用 was。故选 A。"
+        },
+        {
+          "question": "My uncle ______ to Shanghai yesterday, but he didn't ______ the Oriental Pearl Tower because of the heavy rain.",
+          "options": [
+            "A. went; visited",
+            "B. went; visit",
+            "C. goes; visit",
+            "D. goes; visited"
+          ],
+          "answer": 1,
+          "explanation": "解析：由 yesterday 可知第一空用过去式 went；第二空在 didn't 后面必须用动词原形 visit。故选 B。"
+        }
+      ]
+    },
+    "chap_13_p02": {
+      "id": "chap_13_p02",
+      "name": "不定代词与复合不定代词综合辨析（some/any, both/neither, 复合词形容词后置）",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 2 P18 · 课堂学习笔记",
+      "citations": [
+        {
+          "source": "课堂英语学习笔记七年级下册 (Unit 2 Grammar)",
+          "text": "Indefinite pronouns 不定代词：someone/anyone/nobody, something/anything/nothing。形容词修饰复合不定代词时必须后置：Is there anything interesting? There is nothing serious.",
+          "note": "两者与三者的辨析：both (两者都) / neither (两者都不) / either (两者中任意一个)；all (三者及以上都) / none (三者及以上都不)。"
+        },
+        {
+          "source": "七下 Unit 2 The Steel Roses of China 课文",
+          "text": "Nobody gave up when the game seemed lost. Everyone worked as a team.",
+          "note": "复合不定代词作主语时，谓语动词一律用单数形式。"
+        }
+      ],
+      "rules": [
+        "形容词后置规则：修饰复合不定代词（-one, -body, -thing）的形容词必须放在其后，如 something important, nothing new。",
+        "单数一致原则：复合不定代词作主语，谓语动词一律用第三人称单数 (Everyone has a dream)。",
+        "some 与 any 转化：some 用于肯定句，以及希望得到对方肯定回答的疑问句 (Would you like some tea?)；any 用于否定句和疑问句。"
+      ],
+      "pitfalls": "【高频陷阱】：形容词位置放错，误说成 *important something*；或者作主语时谓语动词错用复数，如误写成 *Everyone are here*（正确为 Everyone is here）。",
+      "exercises": [
+        {
+          "question": "I have ______ to tell you, but please keep it a secret. Don't tell ______.",
+          "options": [
+            "A. something important; anybody",
+            "B. important something; somebody",
+            "C. anything important; nobody",
+            "D. something important; nobody"
+          ],
+          "answer": 0,
+          "explanation": "解析：形容词修饰复合不定代词需后置，故排除 B；肯定句中用 something important；祈使否定句 Don't tell... 中用 anybody，构成“别告诉任何人”。故选 A。"
+        },
+        {
+          "question": "— Which of the two smart watches do you prefer? \n— ______. I don't like modern electronic gadgets at all.",
+          "options": [
+            "A. Both",
+            "B. All",
+            "C. Neither",
+            "D. None"
+          ],
+          "answer": 2,
+          "explanation": "解析：根据问句 the two smart watches 可知在“两者”之间选择；由答句后半句“完全不喜欢”可知表示“两者都不”，用 neither。故选 C。"
+        }
+      ]
+    },
+    "chap_13_p03": {
+      "id": "chap_13_p03",
+      "name": "连系动词体系分类与表语结构（look/sound/smell/taste/feel 及 变化/保持动词）",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 3 P34 · Food matters 语法精析",
+      "citations": [
+        {
+          "source": "课堂英语学习笔记七年级下册 (Unit 3 Grammar: Linking verbs)",
+          "text": "五大感官连系动词：look (看起来), sound (听起来), smell (闻起来), taste (尝起来), feel (摸起来/感觉)。后接形容词作表语，不能接副词！例如：The cake tastes delicious. (不能用 deliciously)。",
+          "note": "变化系动词：become, get, turn, grow；保持系动词：keep, stay, remain。"
+        },
+        {
+          "source": "七下 Unit 3 Delicious memories 课文原声",
+          "text": "The traditional dumplings smell wonderful and taste even better when shared with grandparents.",
+          "note": "better 为 well/good 的比较级，在此作 taste 的表语形容词。"
+        }
+      ],
+      "rules": [
+        "结构公理：主语 + 系动词 + 形容词（表语）。系动词后严禁使用副词作表语！",
+        "感官系动词：look, sound, smell, taste, feel + adj. (It looks beautiful. That sounds great.)",
+        "接名词需加 like：系动词后若接名词，必须加介词 like，构成 look like, sound like, taste like, feel like + n.",
+        "无被动语态：感官系动词表达本身自带被动含义，无被动语态（不能说 *The food is tasted good*）。"
+      ],
+      "pitfalls": "【高频陷阱】：受汉语翻译“尝起来很美味地”影响，错选副词形式（如错选 *tastes deliciously*）；或者误用被动语态。",
+      "exercises": [
+        {
+          "question": "The fresh apple pie on the kitchen table smells ______ and tastes even ______.",
+          "options": [
+            "A. nicely; well",
+            "B. good; better",
+            "C. well; good",
+            "D. nicely; better"
+          ],
+          "answer": 1,
+          "explanation": "解析：smell 与 taste 均为感官连系动词，后面必须接形容词作表语，故排除修饰副词 nicely；even 修饰形容词比较级，good 的比较级为 better。故选 B。"
+        },
+        {
+          "question": "— Listen! The melody played by the girl on the piano sounds so ______.\n— Yes, it makes me ______ relaxed.",
+          "options": [
+            "A. beautiful; feel",
+            "B. beautifully; to feel",
+            "C. beautifully; feel",
+            "D. beautiful; to feel"
+          ],
+          "answer": 0,
+          "explanation": "解析：第一空 sound 后面接形容词 beautiful 作表语；第二空 make sb. do sth. 结构中省去 to。故选 A。"
+        }
+      ]
+    },
+    "chap_13_p04": {
+      "id": "chap_13_p04",
+      "name": "祈使句与倡议表达（Do/Don't/Let's 及 动名词作主语/宾语）",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 4 P50-P56 · The art of having fun 全解",
+      "citations": [
+        {
+          "source": "试卷去手写_20261111_102121.pdf P56 (Unit 4 拓展思路与Useful expressions)",
+          "text": "Useful expressions: Fun can... / Having fun can reduce stress and anxiety. / Enjoying fun helps to build better relationships. / Remember that... / Don't forget to do sth. / Doing away with bad feelings (消除不良情绪) / Keeping us feeling youthful (让我们保持青春的感觉)。",
+          "note": "动名词短语 (Having fun, Enjoying fun) 作主语，谓语动词一律用单数形式 (reduces, helps, is)。"
+        },
+        {
+          "source": "七下 Unit 4 Reading 课文标题与谚语",
+          "text": "All work and no play makes Jack a dull boy. (只工作不玩耍，聪明孩子也变傻)。",
+          "note": "祈使句结构：肯定式以动词原形开头；否定式 Don't + 动词原形；倡议式 Let's + 动词原形。"
+        }
+      ],
+      "rules": [
+        "祈使句肯定式：动词原形开头，省略主语 you (e.g., Turn off your phones and have fun.)。",
+        "祈使句否定式：Don't + 动词原形 (e.g., Don't stay up late gaming.)；公共标语 No + 动名词/名词 (No smoking! No parking!)。",
+        "Let's 句型：Let's do sth. 反义疑问句反问 shall we? 而 Let us do sth. 反义疑问句反问 will you?",
+        "动名词作主语：动名词短语作主语表示常态化行为，谓语动词严格用单数第三人称。"
+      ],
+      "pitfalls": "【高频陷阱】：在祈使句中错用动名词开头（如将 *Listen to me!* 误写成 *Listening to me!*）；或者动名词短语作主语时谓语动词错用复数。",
+      "exercises": [
+        {
+          "question": "______ up your spirit and face the challenge bravely. Success belongs to those who persevere.",
+          "options": [
+            "A. Lifting",
+            "B. Lift",
+            "C. To lift",
+            "D. Lifted"
+          ],
+          "answer": 1,
+          "explanation": "解析：本句无主语，向对方发出鼓励指令，属于肯定祈使句，必须用动词原形 Lift 开头。故选 B。"
+        },
+        {
+          "question": "______ (have) fun with real-life friends ______ essential for maintaining good mental health.",
+          "options": [
+            "A. Having; is",
+            "B. Have; are",
+            "C. Having; are",
+            "D. To have; are"
+          ],
+          "answer": 0,
+          "explanation": "解析：句中有谓语动词系表结构，第一空为动名词短语 Having fun 作主语；动名词作主语谓语动词必须用单数 is。故选 A。"
+        }
+      ]
+    },
+    "chap_13_p05": {
+      "id": "chap_13_p05",
+      "name": "形容词与副词比较级与最高级进阶（规则/不规则变化与 the + 最高级 + of/in 范围）",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 5 P66-P72 · Amazing nature 语法精讲",
+      "citations": [
+        {
+          "source": "课堂英语学习笔记七年级下册 (Unit 5 Grammar)",
+          "text": "Comparatives and superlatives 比较级和最高级：规则变化（单音节直接加 -er/-est，辅音+y变 i 加 -er/-est，多音节词加 more / most）；不规则变化：good/well -> better -> best, bad/badly -> worse -> worst, many/much -> more -> most, little -> less -> least, far -> farther/further -> farthest/furthest。",
+          "note": "最高级标志性句型：the + 最高级 + in (场所/空间范围) / of (人或同类群体的从属范围)。"
+        },
+        {
+          "source": "七下 Unit 6 Reading 课文原句 (试卷去手写 P11)",
+          "text": "This man was Xu Xiake, the greatest traveller in Chinese history.",
+          "note": "the greatest traveller in Chinese history：历史范围用介词 in。"
+        }
+      ],
+      "rules": [
+        "比较级标志词 than：A + be/v. + 比较级 + than + B (Mount Qomolangma is higher than any other mountain).",
+        "比较级前修饰语：可使用 much, a lot, even, far, a little, a bit 修饰比较级加强或减弱语气；绝对不可使用 very, quite, so 修饰比较级！",
+        "最高级范围搭配：in + 区域范围（如 in China, in our class）；of + 同类群体（如 of the three, of all the boys）。"
+      ],
+      "pitfalls": "【高频陷阱】：用 very 修饰比较级！例如说 *very taller* 是严重语法错误，必须用 *much taller* 或 *a lot taller*；副词最高级前的 the 可以省略，但形容词最高级前的 the 严禁遗漏。",
+      "exercises": [
+        {
+          "question": "Among all the historical explorers, Xu Xiake is considered ______ traveller ______ Chinese history.",
+          "options": [
+            "A. the greatest; in",
+            "B. greater; than",
+            "C. greatest; of",
+            "D. the greatest; of"
+          ],
+          "answer": 0,
+          "explanation": "解析：第一空表示“最伟大的”，形容词最高级前加 the；第二空在“中国历史”这一时空范围用介词 in。故选 A。"
+        },
+        {
+          "question": "The newly opened Sanxingdui Museum is ______ larger than the old one, and it attracts ______ tourists every weekend.",
+          "options": [
+            "A. very; much more",
+            "B. much; many more",
+            "C. more; much",
+            "D. even; much"
+          ],
+          "answer": 1,
+          "explanation": "解析：修饰比较级 larger 需用 much/even，排除 very；tourists 为可数名词复数，表示“多得多的游客”用 many more tourists。故选 B。"
+        }
+      ]
+    },
+    "chap_13_p06": {
+      "id": "chap_13_p06",
+      "name": "同级比较句型 as...as 与否定形式 not as/so...as",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 6 P82 · Hitting the road 核心语法",
+      "citations": [
+        {
+          "source": "试卷去手写_20261111_102605.pdf P11 (Unit 6 Language notes)",
+          "text": "原句 3: Surprisingly, I started to enjoy the taste. And cooking hot pot was just as fun as eating it! (做火锅和吃火锅一样有趣！)\n原句 6: People say I'm as great as Zhang Qian and Xuanzang. (人们说我和张骞、玄奘一样伟大)。",
+          "note": "as...as 表示同级比较，意为“和……一样……”，中间必须使用形容词或副词的【原级】！"
+        }
+      ],
+      "rules": [
+        "肯定句型：主语 + 谓语 + as + 形容词/副词【原级】 + as + 比较对象 (A 与 B 一样...)。",
+        "否定句型：主语 + 谓语 + not as/so + 形容词/副词【原级】 + as + 比较对象 (A 不如 B... = B 比 A 更...)。",
+        "倍数表达法：倍数 + as + 原级 + as (This room is three times as large as that one).",
+        "as...as possible 结构：意为“尽可能……”，相当于 as...as sb. can/could (e.g., Run as fast as possible)."
+      ],
+      "pitfalls": "【高频陷阱】：在 as...as 中间错误使用比较级！例如误写成 *as better as* 或 *as taller as*，只要看到 as...as，中间有且仅有【原级】！",
+      "exercises": [
+        {
+          "question": "Cooking Sichuan hot pot with local friends is just as ______ as visiting the traditional museum.",
+          "options": [
+            "A. fun",
+            "B. more fun",
+            "C. most fun",
+            "D. funniest"
+          ],
+          "answer": 0,
+          "explanation": "解析：as...as 之间必须使用形容词原级，fun 作形容词意为“有趣的”，原级为 fun。故选 A。"
+        },
+        {
+          "question": "Traveling by high-speed train is convenient, but it is not ______ flying when covering very long distances.",
+          "options": [
+            "A. so fast as",
+            "B. as faster as",
+            "C. so faster as",
+            "D. fast than"
+          ],
+          "answer": 0,
+          "explanation": "解析：否定同级比较结构为 not so/as + 原级 + as，中间必须是原级 fast。故选 A。"
+        }
+      ]
+    },
+    "chap_13_p07": {
+      "id": "chap_13_p07",
+      "name": "七下高频动词短语与修辞手法国考考点 (can't wait to do, look forward to doing, 双关修辞)",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 6 P11 · 试卷去手写文化课文精析",
+      "citations": [
+        {
+          "source": "试卷去手写_20261111_102605.pdf P11 (Unit 6 Language notes 详细注释)",
+          "text": "1. I just couldn't wait to try Sichuan hot pot! (can't wait to do sth 迫不及待做某事)\n2. When in China, do as the Chinese do! (改编自谚语 When in Rome, do as the Romans do 入乡随俗)\n4. After lunch, things went from really hot to totally cool - we went to the new Sanxingdui Museum! (hot/cool 采用了双关修辞：hot 既指火锅麻辣，又指火锅店热火朝天；cool 既指博物馆空调凉爽，又指文物精美震撼很酷！)\n5. I'm really looking forward to the rest of my trip around China! (look forward to doing sth 期待做某事，to 为介词，后接动名词)\n8. From an early age, Xu dreamed of visiting China's seas and mountains. (dream of doing sth 梦想做某事)\n9. At 22, he set out on his life's journey. (set out on sth 开始某事/踏上旅程)。",
+          "note": "中考高频命题眼：look forward to 中的 to 是介词而非不定式符号，后面必须接名词或动名词 -ing！"
+        }
+      ],
+      "rules": [
+        "can't wait to do sth：迫不及待做某事（后接不定式原形）。",
+        "look forward to doing sth：期待做某事（to 为介词，接动名词 -ing）。",
+        "dream of doing sth：梦想做某事（of 是介词，接动名词 -ing）。",
+        "set out on a journey / set off for a place：动身启程，开始旅程。",
+        "双关修辞 (Pun)：同一单词在上下文利用不同词义创造幽默生动的意境（如 hot/cool 兼具温度与感受）。"
+      ],
+      "pitfalls": "【高频陷阱】：在 look forward to 后面错接动词原形！例如误写成 *I look forward to hear from you*（致命错误，正确必须为 I look forward to hearing from you）。",
+      "exercises": [
+        {
+          "question": "All the students are looking forward to ______ the ancient bronze masks at the Sanxingdui Museum next Saturday.",
+          "options": [
+            "A. see",
+            "B. saw",
+            "C. seeing",
+            "D. seen"
+          ],
+          "answer": 2,
+          "explanation": "解析：look forward to doing sth 为固定短语，其中 to 为介词，后面必须接动名词形式 seeing。故选 C。"
+        },
+        {
+          "question": "— How was your trip to Chengdu?\n— Fantastic! Things went from really hot to totally cool. Here, \"cool\" means ______.",
+          "options": [
+            "A. cold weather only",
+            "B. both comfortably cool and amazingly fashionable/great",
+            "C. not friendly to visitors",
+            "D. tasteless and calm"
+          ],
+          "answer": 1,
+          "explanation": "解析：根据课文语言点双关修辞，cool 既指博物馆环境舒适凉爽，又指陈列文物精美绝伦、非常震撼很酷（fashionable & awesome）。故选 B。"
+        }
+      ]
+    },
+    "chap_13_p65": {
+      "id": "chap_13_p01",
+      "name": "一般过去时核心法则（be动词 was/were、不规则动词过去式与过去时间状语）",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 1 P2 · 试卷去手写 Unit 1 语法精讲",
+      "citations": [
+        {
+          "source": "试卷去手写_20261111_102605.pdf P1 (Unit 1 语法精要)",
+          "text": "一般过去时 (Simple Past Tense) 用于描述过去某个时间里发生的动作或状态，以及过去习惯性、经常性的动作或行为。表达出生相关的信息：I was born in a small village. They were born in the same year. be 动词过去式：am/is -> was, are -> were。疑问句：Were you born in 2008?",
+          "note": "时间状语标志词：in 2008, from 1797 to 1801, yesterday, last week, three days ago, just now 等。"
+        },
+        {
+          "source": "课堂英语学习笔记七年级下册 (Unit 1 Reading)",
+          "text": "Poor in things, rich in love: He was poor as a boy, but his parents gave him immense love.",
+          "note": "动词过去式不规则变化：give -> gave, see -> saw, buy -> bought, go -> went, come -> came。"
+        }
+      ],
+      "rules": [
+        "be 动词过去式两形式：主语是 I / he / she / it / 单数名词时用 was；主语是 you / we / they / 复数名词时用 were。",
+        "实义动词规则变化四部曲：一般加 -ed (worked)；以 e 结尾加 -d (lived)；辅音+y 变 i 加 -ed (studied)；重读闭音节双写尾字母加 -ed (stopped, planned)。",
+        "实义动词疑问与否定句：借用助动词 did，后接动词原形 (Did you go...? I didn't see...)."
+      ],
+      "pitfalls": "【高频陷阱】：在含有 did 或 didn't 的疑问句与否定句中，实义动词忘记变回原形！如误写成 *Did you went there?*（正确为 Did you go there?）。",
+      "exercises": [
+        {
+          "question": "— Where ______ you born, Tony? \n— I ______ born in Cambridge, England in 2009.",
+          "options": [
+            "A. were; was",
+            "B. was; were",
+            "C. are; am",
+            "D. was; was"
+          ],
+          "answer": 0,
+          "explanation": "解析：主语 you 为第二人称，be 动词过去式用 were；答语主语 I 为第一人称单数，be 动词过去式用 was。故选 A。"
+        },
+        {
+          "question": "My uncle ______ to Shanghai yesterday, but he didn't ______ the Oriental Pearl Tower because of the heavy rain.",
+          "options": [
+            "A. went; visited",
+            "B. went; visit",
+            "C. goes; visit",
+            "D. goes; visited"
+          ],
+          "answer": 1,
+          "explanation": "解析：由 yesterday 可知第一空用过去式 went；第二空在 didn't 后面必须用动词原形 visit。故选 B。"
+        }
+      ]
+    },
+    "chap_13_p66": {
+      "id": "chap_13_p02",
+      "name": "不定代词与复合不定代词综合辨析（some/any, both/neither, 复合词形容词后置）",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 2 P18 · 课堂学习笔记",
+      "citations": [
+        {
+          "source": "课堂英语学习笔记七年级下册 (Unit 2 Grammar)",
+          "text": "Indefinite pronouns 不定代词：someone/anyone/nobody, something/anything/nothing。形容词修饰复合不定代词时必须后置：Is there anything interesting? There is nothing serious.",
+          "note": "两者与三者的辨析：both (两者都) / neither (两者都不) / either (两者中任意一个)；all (三者及以上都) / none (三者及以上都不)。"
+        },
+        {
+          "source": "七下 Unit 2 The Steel Roses of China 课文",
+          "text": "Nobody gave up when the game seemed lost. Everyone worked as a team.",
+          "note": "复合不定代词作主语时，谓语动词一律用单数形式。"
+        }
+      ],
+      "rules": [
+        "形容词后置规则：修饰复合不定代词（-one, -body, -thing）的形容词必须放在其后，如 something important, nothing new。",
+        "单数一致原则：复合不定代词作主语，谓语动词一律用第三人称单数 (Everyone has a dream)。",
+        "some 与 any 转化：some 用于肯定句，以及希望得到对方肯定回答的疑问句 (Would you like some tea?)；any 用于否定句和疑问句。"
+      ],
+      "pitfalls": "【高频陷阱】：形容词位置放错，误说成 *important something*；或者作主语时谓语动词错用复数，如误写成 *Everyone are here*（正确为 Everyone is here）。",
+      "exercises": [
+        {
+          "question": "I have ______ to tell you, but please keep it a secret. Don't tell ______.",
+          "options": [
+            "A. something important; anybody",
+            "B. important something; somebody",
+            "C. anything important; nobody",
+            "D. something important; nobody"
+          ],
+          "answer": 0,
+          "explanation": "解析：形容词修饰复合不定代词需后置，故排除 B；肯定句中用 something important；祈使否定句 Don't tell... 中用 anybody，构成“别告诉任何人”。故选 A。"
+        },
+        {
+          "question": "— Which of the two smart watches do you prefer? \n— ______. I don't like modern electronic gadgets at all.",
+          "options": [
+            "A. Both",
+            "B. All",
+            "C. Neither",
+            "D. None"
+          ],
+          "answer": 2,
+          "explanation": "解析：根据问句 the two smart watches 可知在“两者”之间选择；由答句后半句“完全不喜欢”可知表示“两者都不”，用 neither。故选 C。"
+        }
+      ]
+    },
+    "chap_13_p67": {
+      "id": "chap_13_p03",
+      "name": "连系动词体系分类与表语结构（look/sound/smell/taste/feel 及 变化/保持动词）",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 3 P34 · Food matters 语法精析",
+      "citations": [
+        {
+          "source": "课堂英语学习笔记七年级下册 (Unit 3 Grammar: Linking verbs)",
+          "text": "五大感官连系动词：look (看起来), sound (听起来), smell (闻起来), taste (尝起来), feel (摸起来/感觉)。后接形容词作表语，不能接副词！例如：The cake tastes delicious. (不能用 deliciously)。",
+          "note": "变化系动词：become, get, turn, grow；保持系动词：keep, stay, remain。"
+        },
+        {
+          "source": "七下 Unit 3 Delicious memories 课文原声",
+          "text": "The traditional dumplings smell wonderful and taste even better when shared with grandparents.",
+          "note": "better 为 well/good 的比较级，在此作 taste 的表语形容词。"
+        }
+      ],
+      "rules": [
+        "结构公理：主语 + 系动词 + 形容词（表语）。系动词后严禁使用副词作表语！",
+        "感官系动词：look, sound, smell, taste, feel + adj. (It looks beautiful. That sounds great.)",
+        "接名词需加 like：系动词后若接名词，必须加介词 like，构成 look like, sound like, taste like, feel like + n.",
+        "无被动语态：感官系动词表达本身自带被动含义，无被动语态（不能说 *The food is tasted good*）。"
+      ],
+      "pitfalls": "【高频陷阱】：受汉语翻译“尝起来很美味地”影响，错选副词形式（如错选 *tastes deliciously*）；或者误用被动语态。",
+      "exercises": [
+        {
+          "question": "The fresh apple pie on the kitchen table smells ______ and tastes even ______.",
+          "options": [
+            "A. nicely; well",
+            "B. good; better",
+            "C. well; good",
+            "D. nicely; better"
+          ],
+          "answer": 1,
+          "explanation": "解析：smell 与 taste 均为感官连系动词，后面必须接形容词作表语，故排除修饰副词 nicely；even 修饰形容词比较级，good 的比较级为 better。故选 B。"
+        },
+        {
+          "question": "— Listen! The melody played by the girl on the piano sounds so ______.\n— Yes, it makes me ______ relaxed.",
+          "options": [
+            "A. beautiful; feel",
+            "B. beautifully; to feel",
+            "C. beautifully; feel",
+            "D. beautiful; to feel"
+          ],
+          "answer": 0,
+          "explanation": "解析：第一空 sound 后面接形容词 beautiful 作表语；第二空 make sb. do sth. 结构中省去 to。故选 A。"
+        }
+      ]
+    },
+    "chap_13_p68": {
+      "id": "chap_13_p04",
+      "name": "祈使句与倡议表达（Do/Don't/Let's 及 动名词作主语/宾语）",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 4 P50-P56 · The art of having fun 全解",
+      "citations": [
+        {
+          "source": "试卷去手写_20261111_102121.pdf P56 (Unit 4 拓展思路与Useful expressions)",
+          "text": "Useful expressions: Fun can... / Having fun can reduce stress and anxiety. / Enjoying fun helps to build better relationships. / Remember that... / Don't forget to do sth. / Doing away with bad feelings (消除不良情绪) / Keeping us feeling youthful (让我们保持青春的感觉)。",
+          "note": "动名词短语 (Having fun, Enjoying fun) 作主语，谓语动词一律用单数形式 (reduces, helps, is)。"
+        },
+        {
+          "source": "七下 Unit 4 Reading 课文标题与谚语",
+          "text": "All work and no play makes Jack a dull boy. (只工作不玩耍，聪明孩子也变傻)。",
+          "note": "祈使句结构：肯定式以动词原形开头；否定式 Don't + 动词原形；倡议式 Let's + 动词原形。"
+        }
+      ],
+      "rules": [
+        "祈使句肯定式：动词原形开头，省略主语 you (e.g., Turn off your phones and have fun.)。",
+        "祈使句否定式：Don't + 动词原形 (e.g., Don't stay up late gaming.)；公共标语 No + 动名词/名词 (No smoking! No parking!)。",
+        "Let's 句型：Let's do sth. 反义疑问句反问 shall we? 而 Let us do sth. 反义疑问句反问 will you?",
+        "动名词作主语：动名词短语作主语表示常态化行为，谓语动词严格用单数第三人称。"
+      ],
+      "pitfalls": "【高频陷阱】：在祈使句中错用动名词开头（如将 *Listen to me!* 误写成 *Listening to me!*）；或者动名词短语作主语时谓语动词错用复数。",
+      "exercises": [
+        {
+          "question": "______ up your spirit and face the challenge bravely. Success belongs to those who persevere.",
+          "options": [
+            "A. Lifting",
+            "B. Lift",
+            "C. To lift",
+            "D. Lifted"
+          ],
+          "answer": 1,
+          "explanation": "解析：本句无主语，向对方发出鼓励指令，属于肯定祈使句，必须用动词原形 Lift 开头。故选 B。"
+        },
+        {
+          "question": "______ (have) fun with real-life friends ______ essential for maintaining good mental health.",
+          "options": [
+            "A. Having; is",
+            "B. Have; are",
+            "C. Having; are",
+            "D. To have; are"
+          ],
+          "answer": 0,
+          "explanation": "解析：句中有谓语动词系表结构，第一空为动名词短语 Having fun 作主语；动名词作主语谓语动词必须用单数 is。故选 A。"
+        }
+      ]
+    },
+    "chap_13_p69": {
+      "id": "chap_13_p05",
+      "name": "形容词与副词比较级与最高级进阶（规则/不规则变化与 the + 最高级 + of/in 范围）",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 5 P66-P72 · Amazing nature 语法精讲",
+      "citations": [
+        {
+          "source": "课堂英语学习笔记七年级下册 (Unit 5 Grammar)",
+          "text": "Comparatives and superlatives 比较级和最高级：规则变化（单音节直接加 -er/-est，辅音+y变 i 加 -er/-est，多音节词加 more / most）；不规则变化：good/well -> better -> best, bad/badly -> worse -> worst, many/much -> more -> most, little -> less -> least, far -> farther/further -> farthest/furthest。",
+          "note": "最高级标志性句型：the + 最高级 + in (场所/空间范围) / of (人或同类群体的从属范围)。"
+        },
+        {
+          "source": "七下 Unit 6 Reading 课文原句 (试卷去手写 P11)",
+          "text": "This man was Xu Xiake, the greatest traveller in Chinese history.",
+          "note": "the greatest traveller in Chinese history：历史范围用介词 in。"
+        }
+      ],
+      "rules": [
+        "比较级标志词 than：A + be/v. + 比较级 + than + B (Mount Qomolangma is higher than any other mountain).",
+        "比较级前修饰语：可使用 much, a lot, even, far, a little, a bit 修饰比较级加强或减弱语气；绝对不可使用 very, quite, so 修饰比较级！",
+        "最高级范围搭配：in + 区域范围（如 in China, in our class）；of + 同类群体（如 of the three, of all the boys）。"
+      ],
+      "pitfalls": "【高频陷阱】：用 very 修饰比较级！例如说 *very taller* 是严重语法错误，必须用 *much taller* 或 *a lot taller*；副词最高级前的 the 可以省略，但形容词最高级前的 the 严禁遗漏。",
+      "exercises": [
+        {
+          "question": "Among all the historical explorers, Xu Xiake is considered ______ traveller ______ Chinese history.",
+          "options": [
+            "A. the greatest; in",
+            "B. greater; than",
+            "C. greatest; of",
+            "D. the greatest; of"
+          ],
+          "answer": 0,
+          "explanation": "解析：第一空表示“最伟大的”，形容词最高级前加 the；第二空在“中国历史”这一时空范围用介词 in。故选 A。"
+        },
+        {
+          "question": "The newly opened Sanxingdui Museum is ______ larger than the old one, and it attracts ______ tourists every weekend.",
+          "options": [
+            "A. very; much more",
+            "B. much; many more",
+            "C. more; much",
+            "D. even; much"
+          ],
+          "answer": 1,
+          "explanation": "解析：修饰比较级 larger 需用 much/even，排除 very；tourists 为可数名词复数，表示“多得多的游客”用 many more tourists。故选 B。"
+        }
+      ]
+    },
+    "chap_13_p70": {
+      "id": "chap_13_p06",
+      "name": "同级比较句型 as...as 与否定形式 not as/so...as",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 6 P82 · Hitting the road 核心语法",
+      "citations": [
+        {
+          "source": "试卷去手写_20261111_102605.pdf P11 (Unit 6 Language notes)",
+          "text": "原句 3: Surprisingly, I started to enjoy the taste. And cooking hot pot was just as fun as eating it! (做火锅和吃火锅一样有趣！)\n原句 6: People say I'm as great as Zhang Qian and Xuanzang. (人们说我和张骞、玄奘一样伟大)。",
+          "note": "as...as 表示同级比较，意为“和……一样……”，中间必须使用形容词或副词的【原级】！"
+        }
+      ],
+      "rules": [
+        "肯定句型：主语 + 谓语 + as + 形容词/副词【原级】 + as + 比较对象 (A 与 B 一样...)。",
+        "否定句型：主语 + 谓语 + not as/so + 形容词/副词【原级】 + as + 比较对象 (A 不如 B... = B 比 A 更...)。",
+        "倍数表达法：倍数 + as + 原级 + as (This room is three times as large as that one).",
+        "as...as possible 结构：意为“尽可能……”，相当于 as...as sb. can/could (e.g., Run as fast as possible)."
+      ],
+      "pitfalls": "【高频陷阱】：在 as...as 中间错误使用比较级！例如误写成 *as better as* 或 *as taller as*，只要看到 as...as，中间有且仅有【原级】！",
+      "exercises": [
+        {
+          "question": "Cooking Sichuan hot pot with local friends is just as ______ as visiting the traditional museum.",
+          "options": [
+            "A. fun",
+            "B. more fun",
+            "C. most fun",
+            "D. funniest"
+          ],
+          "answer": 0,
+          "explanation": "解析：as...as 之间必须使用形容词原级，fun 作形容词意为“有趣的”，原级为 fun。故选 A。"
+        },
+        {
+          "question": "Traveling by high-speed train is convenient, but it is not ______ flying when covering very long distances.",
+          "options": [
+            "A. so fast as",
+            "B. as faster as",
+            "C. so faster as",
+            "D. fast than"
+          ],
+          "answer": 0,
+          "explanation": "解析：否定同级比较结构为 not so/as + 原级 + as，中间必须是原级 fast。故选 A。"
+        }
+      ]
+    },
+    "chap_13_p71": {
+      "id": "chap_13_p07",
+      "name": "七下高频动词短语与修辞手法国考考点 (can't wait to do, look forward to doing, 双关修辞)",
+      "chapter": "第13章 七下外研版 (WY) 单元语法与中考核心考点",
+      "page_ref": "七下外研版 Unit 6 P11 · 试卷去手写文化课文精析",
+      "citations": [
+        {
+          "source": "试卷去手写_20261111_102605.pdf P11 (Unit 6 Language notes 详细注释)",
+          "text": "1. I just couldn't wait to try Sichuan hot pot! (can't wait to do sth 迫不及待做某事)\n2. When in China, do as the Chinese do! (改编自谚语 When in Rome, do as the Romans do 入乡随俗)\n4. After lunch, things went from really hot to totally cool - we went to the new Sanxingdui Museum! (hot/cool 采用了双关修辞：hot 既指火锅麻辣，又指火锅店热火朝天；cool 既指博物馆空调凉爽，又指文物精美震撼很酷！)\n5. I'm really looking forward to the rest of my trip around China! (look forward to doing sth 期待做某事，to 为介词，后接动名词)\n8. From an early age, Xu dreamed of visiting China's seas and mountains. (dream of doing sth 梦想做某事)\n9. At 22, he set out on his life's journey. (set out on sth 开始某事/踏上旅程)。",
+          "note": "中考高频命题眼：look forward to 中的 to 是介词而非不定式符号，后面必须接名词或动名词 -ing！"
+        }
+      ],
+      "rules": [
+        "can't wait to do sth：迫不及待做某事（后接不定式原形）。",
+        "look forward to doing sth：期待做某事（to 为介词，接动名词 -ing）。",
+        "dream of doing sth：梦想做某事（of 是介词，接动名词 -ing）。",
+        "set out on a journey / set off for a place：动身启程，开始旅程。",
+        "双关修辞 (Pun)：同一单词在上下文利用不同词义创造幽默生动的意境（如 hot/cool 兼具温度与感受）。"
+      ],
+      "pitfalls": "【高频陷阱】：在 look forward to 后面错接动词原形！例如误写成 *I look forward to hear from you*（致命错误，正确必须为 I look forward to hearing from you）。",
+      "exercises": [
+        {
+          "question": "All the students are looking forward to ______ the ancient bronze masks at the Sanxingdui Museum next Saturday.",
+          "options": [
+            "A. see",
+            "B. saw",
+            "C. seeing",
+            "D. seen"
+          ],
+          "answer": 2,
+          "explanation": "解析：look forward to doing sth 为固定短语，其中 to 为介词，后面必须接动名词形式 seeing。故选 C。"
+        },
+        {
+          "question": "— How was your trip to Chengdu?\n— Fantastic! Things went from really hot to totally cool. Here, \"cool\" means ______.",
+          "options": [
+            "A. cold weather only",
+            "B. both comfortably cool and amazingly fashionable/great",
+            "C. not friendly to visitors",
+            "D. tasteless and calm"
+          ],
+          "answer": 1,
+          "explanation": "解析：根据课文语言点双关修辞，cool 既指博物馆环境舒适凉爽，又指陈列文物精美绝伦、非常震撼很酷（fashionable & awesome）。故选 B。"
+        }
+      ]
     }
   },
   "materials": {
@@ -3070,6 +3732,82 @@
           ],
           "answer": 0,
           "explanation": "make friends with sb 意为“与某人交朋友”，friends 习惯使用复数形式。故选 A。"
+        }
+      ]
+    },
+    "mat_07": {
+      "id": "mat_07",
+      "title": "七下 Unit 6 Hitting the road 核心语言点与文化阅读（去手写清爽版）",
+      "tag": "外研七下课文原篇",
+      "source_file": "试卷去手写_20261111_102605.pdf",
+      "pages": 25,
+      "overview": "提炼四川火锅与三星堆双关修辞（from hot to totally cool）、中国俗语（When in China, do as the Chinese do）、千古奇人徐霞客探险记与张骞、玄奘历史文化名篇。",
+      "grammar_focus": [
+        "as...as 同级比较",
+        "look forward to doing",
+        "can't wait to do",
+        "双关修辞 (Pun)"
+      ],
+      "citations": [
+        {
+          "speaker": "Unit 6 Language notes 原文",
+          "content": "Surprisingly, I started to enjoy the taste. And cooking hot pot was just as fun as eating it!"
+        },
+        {
+          "speaker": "文化名篇阅读原声",
+          "content": "This man was Xu Xiake, the greatest traveller in Chinese history. At 22, he set out on his life's journey."
+        },
+        {
+          "speaker": "双关句型精析",
+          "content": "After lunch, things went from really hot to totally cool - we went to the new Sanxingdui Museum!"
+        }
+      ]
+    },
+    "mat_08": {
+      "id": "mat_08",
+      "title": "七下 Unit 4 The art of having fun 教材全解（去手写版）",
+      "tag": "外研七下课文原篇",
+      "source_file": "试卷去手写_20261111_102121.pdf",
+      "pages": 30,
+      "overview": "包含成都华希昆虫博物馆巨蚊探秘与吉尼斯世界纪录、谚语 All work and no play makes Jack a dull boy、娱乐与减压心理机制（Doing away with bad feelings）。",
+      "grammar_focus": [
+        "祈使句倡议 (Do/Don't)",
+        "动名词作主语",
+        "keep sb. doing",
+        "discover doing"
+      ],
+      "citations": [
+        {
+          "speaker": "Unit 4 课本核心观点",
+          "content": "Having fun can reduce stress and anxiety. Enjoying fun helps to build better relationships with others."
+        },
+        {
+          "speaker": "吉尼斯世界纪录纪实",
+          "content": "Zhao Li finds the world's largest mosquito in Chengdu. Guinness World Records started in 1955."
+        }
+      ]
+    },
+    "mat_09": {
+      "id": "mat_09",
+      "title": "课堂英语学习笔记七年级下册（外研版精编）",
+      "tag": "同步课堂笔记与语法通解",
+      "source_file": "试卷去手写_20261111_101615.pdf",
+      "pages": 30,
+      "overview": "李兆海主编。系统涵盖七下 6 大单元完整课程大纲、一般过去时、不定代词、连系动词、祈使句、比较级与最高级、同级比较专项速记与中考易错通解。",
+      "grammar_focus": [
+        "一般过去时 was/were",
+        "不定代词修饰词后置",
+        "连系动词表语",
+        "形容词/副词比较级最高级"
+      ],
+      "citations": [
+        {
+          "speaker": "Unit 1 语法精讲",
+          "content": "一般过去时描述过去动作或状态：I was born in a small village. Were you born in 2008?"
+        },
+        {
+          "speaker": "Unit 2 铿锵玫瑰原声",
+          "content": "The Steel Roses of China: Nobody gave up when the game seemed lost."
         }
       ]
     }
